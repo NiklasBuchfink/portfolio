@@ -11,7 +11,6 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
-    "@chakra-ui/nuxt": "^0.3.0",
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/emotion": "^0.1.0",
     "core-js": "^3.9.1",
