@@ -1,0 +1,91 @@
+@mixin headline-1 {
+  font-size: 81px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 81px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin headline-2 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 47px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin headline-3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin menu {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin paragraph-large {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin paragraph {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin caption {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin footer-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin button-text {
+  font-family: IBM Plex Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@mixin badge-text {
+  font-family: IBM Plex Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: right;
+}
