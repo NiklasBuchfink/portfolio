@@ -1,91 +1,61 @@
+// headlines
 @mixin headline-1 {
-  font-size: 81px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 81px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-semibold;
+  line-height: $line-heigth-h1;
 }
 
 @mixin headline-2 {
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 47px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: $font-size-h2;
+  font-weight: $font-weight-semibold;
+  line-height: $line-heigth-h2;
 }
 
 @mixin headline-3 {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: $font-size-h3;
+  font-weight: $font-weight-medium;
+  line-height: $line-heigth-h3;
 }
 
+// shell
 @mixin menu {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-@mixin paragraph-large {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-@mixin paragraph {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-@mixin caption {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: $font-size-menu;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-menu;
 }
 
 @mixin footer-text {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: $font-size-footer;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-footer;
 }
 
+// flowing text
+@mixin paragraph-large {
+  font-size: $font-size-paragraph-large;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-paragraph-large;
+}
+
+@mixin paragraph {
+  font-size: $font-size-paragraph;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-paragraph;
+}
+
+@mixin caption {
+  font-size: $font-size-caption;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-caption;
+}
+
+// elements
 @mixin button-text {
-  font-family: IBM Plex Sans;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 31px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: $font-size-button;
+  font-weight: $font-weight-medium;
 }
 
 @mixin badge-text {
-  font-family: IBM Plex Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: right;
+  font-size: $font-size-badge;
+  font-weight: $font-weight-regular;
 }
