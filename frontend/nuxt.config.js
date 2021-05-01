@@ -41,6 +41,8 @@ export default {
     '@nuxtjs/emotion',
     // https://github.com/nuxt-community/apollo-module
     '@nuxtjs/apollo',
+    // https://github.com/Developmint/nuxt-webfontloade
+    'nuxt-webfontloader',
   ],
 
   apollo: {
