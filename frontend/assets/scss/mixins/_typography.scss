@@ -2,19 +2,19 @@
 @mixin headline-1 {
   font-size: $font-size-h1;
   font-weight: $font-weight-semibold;
-  line-height: $line-heigth-h1;
+  line-height: $line-height-h1;
 }
 
 @mixin headline-2 {
   font-size: $font-size-h2;
   font-weight: $font-weight-semibold;
-  line-height: $line-heigth-h2;
+  line-height: $line-height-h2;
 }
 
 @mixin headline-3 {
   font-size: $font-size-h3;
   font-weight: $font-weight-medium;
-  line-height: $line-heigth-h3;
+  line-height: $line-height-h3;
 }
 
 // shell
