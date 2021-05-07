@@ -1,6 +1,20 @@
 @mixin shadow-black() {
   background-color: $color-gray;
-  box-shadow: inset 4px 4px 4px rgba($rgb-black, 0.06),
+  box-shadow: 8px 8px 24px rgba($rgb-darkgray, 0.25),
+    inset 4px 4px 4px rgba($rgb-black, 0.06),
     inset -4px -4px 4px rgba($rgb-white, 0.06);
-  filter: drop-shadow(8px 8px 24px rgba($rgb-darkgray, 0.25));
+}
+
+@mixin shadow-card () {
+  box-shadow: 50px 50px 200px rgba($rgb-darkgray, 0.4),
+  inset 20px 20px 20px rgba($rgb-white, 0.06),
+  inset -20px -20px 20px rgba($rgb-black, 0.06);
+}
+
+@mixin shadow-mockup () {
+  filter: drop-shadow(25px 25px 100px rgba($rgb-black, 0.25));
+}
+
+@mixin shadow-text () {
+  text-shadow: 8px 8px 24px rgba($rgb-black, 0.25);
 }

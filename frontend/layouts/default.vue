@@ -20,7 +20,7 @@ export default {}
 
 <style lang="scss" scoped>
 .actions {
-  position: absolute;
+  position: absolut; //fixed
   top: 0;
   left: 0;
   right: 0;

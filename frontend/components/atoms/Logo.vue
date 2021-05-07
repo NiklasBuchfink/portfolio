@@ -1,7 +1,7 @@
 <template>
-  <nuxt-link to="/">
+  <NuxtLink to="/">
     <div class="logo"></div>
-  </nuxt-link>
+  </NuxtLink>
 </template>
 
 <script>

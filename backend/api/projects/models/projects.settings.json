@@ -14,8 +14,8 @@
     "title": {
       "type": "string"
     },
-    "projectImage": {
-      "collection": "file",
+    "image": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -23,10 +23,24 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
-    "description": {
+    "subtitle": {
       "type": "text"
+    },
+    "letter": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "categories": {
+      "via": "project",
+      "collection": "categories"
+    },
+    "startpage": {
+      "type": "boolean"
     }
   }
 }

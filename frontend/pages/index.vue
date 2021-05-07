@@ -15,10 +15,35 @@
 
       </div>
     </div>
+    <div class="cards"
+      v-for="project in projects"
+      v-bind:key="project.id"
+    >
+      <div
+        v-if="project.startpage"
+      >
+
+        <Card :project="project"/>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-export default {}
+import { projectQuery } from '~/graphql/query'
+
+export default {
+   data() {
+    return {
+      projects:[],
+    }
+  },
+  apollo: {
+    projects: {
+      prefetch: true,
+      query: projectQuery,
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

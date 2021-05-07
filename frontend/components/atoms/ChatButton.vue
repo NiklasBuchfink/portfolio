@@ -1,5 +1,6 @@
 <template>
   <div class="chatButton">
+    <div class="chatIcon"></div>
     <span>Get in touch</span>
   </div>
 </template>
@@ -10,20 +11,21 @@ export default {}
 
 <style lang="scss" scoped>
 .chatButton {
-  height: 2rem;
-  width: auto;
   display: inline-flex;
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: $box-radius;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  @include button-text;
   @include shadow-black;
-  background-image: $chat;
-  background-repeat: no-repeat;
-  background-position: 0.5rem center;
-  background-size: 1rem 0.875rem;
-  padding-left: 2rem;
+  border-radius: $box-radius;
+  width: auto;
   color: $color-white;
-  padding-top: 0.2rem;
-  padding-right: 0.75rem;
+  .chatIcon {
+    height: 2.25rem;
+    width: 1.75rem;
+    background-image: $chat;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-position: center center;
+  }
 }
 </style>

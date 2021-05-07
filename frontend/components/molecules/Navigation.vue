@@ -2,14 +2,14 @@
   <nav class="navigation">
     <ul>
       <li>
-        <nuxt-link to="/projects">
+        <NuxtLink to="/projects">
           <p>Projects</p>
-        </nuxt-link>
+        </NuxtLink>
       </li>
       <li>
-        <nuxt-link to="/about">
+        <NuxtLink to="/about">
           <p>About</p>
-        </nuxt-link>
+        </NuxtLink>
       </li>
     </ul>
   </nav>
