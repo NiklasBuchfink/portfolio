@@ -5,7 +5,7 @@ export const projectQuery = gql`
     projects{
       id
       letter
-      image {url, alternativeText}
+      image {url, alternativeText, formats}
       color
       title
       subtitle

@@ -1,9 +1,16 @@
+
+const strapiBaseUri = process.env.API_URL || "http://localhost:1337";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  env: {
+    strapiBaseUri,
+    // strapiBaseUrl: process.env.API_URL || 'http://localhost:1337'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Portfolio | Niklas Buchfink - Designer & Engineer',
+    title: 'Niklas Buchfink - Designer & Engineer',
     htmlAttrs: {
       lang: 'en',
     },
@@ -60,7 +67,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['IBM+Plex+Sans:400,500,600&display=swap'], // Loads IBM Plex Sans font
+      families: ['IBM+Plex+Sans:100,400,500,600&display=swap'], // Loads IBM Plex Sans font
     },
   },
 

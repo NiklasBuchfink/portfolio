@@ -59,3 +59,8 @@
   font-size: $font-size-badge;
   font-weight: $font-weight-regular;
 }
+
+@mixin highlight-text {
+  font-size: $font-size-highlight;
+  font-weight: $font-weight-semibold;
+}
