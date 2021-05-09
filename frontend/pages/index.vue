@@ -22,7 +22,6 @@
       <div
         v-if="project.startpage"
       >
-
         <Card :project="project"/>
       </div>
     </div>
@@ -32,7 +31,7 @@
 import { projectQuery } from '~/graphql/query'
 
 export default {
-   data() {
+  data() {
     return {
       projects:[],
     }
@@ -42,7 +41,8 @@ export default {
       prefetch: true,
       query: projectQuery,
     }
-  }
+  },
+  layout: 'startpage'
 }
 </script>
 

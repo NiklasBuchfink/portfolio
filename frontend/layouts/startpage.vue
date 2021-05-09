@@ -11,6 +11,7 @@
     <main>
       <Nuxt />
     </main>
+    <StartpageFooter />
     <Footer />
   </div>
 </template>
