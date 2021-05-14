@@ -24,11 +24,6 @@ export default {
     getStrapiMedia,
   },
   computed: {
-    // colorGradient () {
-    //   return {
-    //     '--project-color': this.color
-    //   }
-    // }
     colorGradient () {
       let hex = this.color;
       let c;
@@ -51,8 +46,8 @@ export default {
 <style lang="scss" scoped>
 .cardImage {
   .cardShape {
-    @include shadow-card;
     display: flex;
+    @include shadow-card;
     background: linear-gradient(135deg, rgba(var(--project-color), 0.8) 0%, rgb(var(--project-color)) 100%);
     border-radius: 2rem;
     width: 34.5rem;
@@ -63,11 +58,11 @@ export default {
       padding: 0.75rem 0rem 0rem 2rem;
     }
     img {
+      position: absolute;
+      object-fit: cover;
       @include shadow-mockup;
       height: 34.5rem;
       width: 34.5rem;
-      object-fit: cover;
-      position: absolute;
     }
   }
 }

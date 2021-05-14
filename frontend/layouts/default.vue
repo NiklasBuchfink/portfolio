@@ -27,7 +27,7 @@ export default {}
   right: 0;
   bottom: 0;
   height: 100%;
-  z-index: 1001;
+  // z-index: 1001;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,6 +49,6 @@ main {
   width: calc(100vw - 20rem);
   height: 100%;
   margin: 0 auto;
-  z-index: 1002;
+  // z-index: 1002;
 }
 </style>

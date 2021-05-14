@@ -22,6 +22,7 @@ export default {}
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+  width: 100vw;
   padding: 0rem 3.375rem;
   background-color: $color-darkgray;
   @include footer-text;

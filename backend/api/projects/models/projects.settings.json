@@ -41,6 +41,9 @@
     },
     "startpage": {
       "type": "boolean"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

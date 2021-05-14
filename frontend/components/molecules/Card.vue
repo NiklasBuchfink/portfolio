@@ -1,10 +1,12 @@
 <template>
   <div class="card">
-    <CardImage
-      :letter="project.letter"
-      :image="project.image"
-      :color="project.color"
-    />
+    <a :href="project.link" target="blank">
+      <CardImage
+        :letter="project.letter"
+        :image="project.image"
+        :color="project.color"
+      />
+    </a>
     <CardContent
       :title="project.title"
       :subtitle="project.subtitle"
