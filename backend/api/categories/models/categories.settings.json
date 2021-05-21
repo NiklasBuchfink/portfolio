@@ -14,9 +14,9 @@
     "title": {
       "type": "string"
     },
-    "project": {
+    "projects": {
       "via": "categories",
-      "model": "projects"
+      "collection": "projects"
     }
   }
 }

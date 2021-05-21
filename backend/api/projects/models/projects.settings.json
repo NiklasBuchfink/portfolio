@@ -36,8 +36,9 @@
       "type": "string"
     },
     "categories": {
-      "via": "project",
-      "collection": "categories"
+      "via": "projects",
+      "collection": "categories",
+      "dominant": true
     },
     "startpage": {
       "type": "boolean"
