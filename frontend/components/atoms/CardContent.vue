@@ -33,10 +33,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-start;
   gap: 2rem;
   height: 34.5rem;
   width: 28.5rem;
-  padding-left: 4rem;
+  // padding-left: 4rem;
   padding-bottom: 2rem;
 
   .title {

@@ -18,20 +18,29 @@ export default {
 <style lang="scss" scoped>
 .startpageFooter {
   height: calc(100vh - 3rem);
-  width: 100vw;
+  width: 100%;
   background-color: $color-darkgray;
   color: $color-nearlywhite;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: $max_width_xs) {
+    height: calc(100vh - 8rem);
+    align-items: flex-start;
+  }
   .footerContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: calc(100vw - 20rem);
     height: 25rem;
-    padding-top: 10.625rem;
     max-width: 1440px;
-    margin: 0 auto;
+    margin: auto auto;
+    @media screen and (max-width: $max_width_s) {
+      width: calc(100vw - 6.75rem);
+    }
+    @media screen and (max-width: $max_width_xs) {
+      width: calc(100vw - 4rem);
+    }
     span {
       @include highlight-text;
     }
@@ -44,18 +53,37 @@ export default {
       align-items: center;
       gap: 1.25rem;
       padding-top: 3.75rem;
+      @media screen and (max-width: $max_width_xs) {
+        flex-direction: column;
+      }
       .chatIconLg {
-        margin-top: 0.75rem;
-        height: 5.125rem;
+        display: inline-block;
+        -webkit-mask-image: $chat-lg;
+        background-color: $color-white;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        margin-top: 1.25rem;
+        height: 5rem;
         width: 5rem;
-        background-image: $chat-lg;
-        background-repeat: no-repeat;
-        background-size: auto auto;
-        background-position: center center;
+        padding: 0.75rem;
+        // background-image: $chat-lg;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center center;
+        @media screen and (max-width: $max_width_s) {
+          height: 3.25rem;
+          width: 3.25rem;
+        }
       }
       span {
-      font-size: $font-size-highlight;
+      @include highlight-text;
       font-weight: $font-weight-thin;
+      @media screen and (max-width: $max_width_s) {
+        font-size: 3rem;
+      }
+      @media screen and (max-width: $max_width_xs) {
+        font-size: 2.5rem;
+      }
         u {
           text-decoration: none;
           border-bottom: 0.125rem solid $color-nearlywhite;

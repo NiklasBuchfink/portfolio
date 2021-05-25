@@ -109,7 +109,7 @@ r-cell[order="14"]  { order: 14 }
 r-cell[order="15"]  { order: 15 }
 r-cell[order="16"]  { order: 16 }
 
-@media (max-width: 100rem) {
+@media (max-width: 1600px) { /**/
   r-grid[columns-xl="1"] { --grid-tc: repeat(1, 1fr) }
   r-grid[columns-xl="2"] { --grid-tc: repeat(2, 1fr) }
   r-grid[columns-xl="3"] { --grid-tc: repeat(3, 1fr) }
@@ -208,7 +208,7 @@ r-cell[order="16"]  { order: 16 }
   r-cell[order-xl="16"]  { order: 16 }
 }
 
-@media (max-width: 90rem) {
+@media (max-width: 1440px) {
   r-grid[columns-l="1"] { --grid-tc: repeat(1, 1fr) }
   r-grid[columns-l="2"] { --grid-tc: repeat(2, 1fr) }
   r-grid[columns-l="3"] { --grid-tc: repeat(3, 1fr) }
@@ -266,7 +266,7 @@ r-cell[order="16"]  { order: 16 }
   /* connect vars */
   r-cell[span-l] { grid-column-end: span var(--grid-ce) }
   r-cell[span-l*="+"], r-cell[span-l*="-"], r-cell[span-l*=".."] {
-    grid-column-ltart: var(--grid-cs) }
+    grid-column-start: var(--grid-cs) }
   r-cell[span-l*="-"], r-cell[span-l*=".."] {
     grid-column-end: var(--grid-ce) }
   r-cell[span-l="row"] { grid-column: 1 / -1 }
@@ -307,7 +307,7 @@ r-cell[order="16"]  { order: 16 }
   r-cell[order-l="16"]  { order: 16 }
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 1240px) {
   r-grid[columns-m="1"] { --grid-tc: repeat(1, 1fr) }
   r-grid[columns-m="2"] { --grid-tc: repeat(2, 1fr) }
   r-grid[columns-m="3"] { --grid-tc: repeat(3, 1fr) }
@@ -365,7 +365,7 @@ r-cell[order="16"]  { order: 16 }
   /* connect vars */
   r-cell[span-m] { grid-column-end: span var(--grid-ce) }
   r-cell[span-m*="+"], r-cell[span-m*="-"], r-cell[span-m*=".."] {
-    grid-column-mtart: var(--grid-cs) }
+    grid-column-start: var(--grid-cs) }
   r-cell[span-m*="-"], r-cell[span-m*=".."] {
     grid-column-end: var(--grid-ce) }
   r-cell[span-m="row"] { grid-column: 1 / -1 }
@@ -407,7 +407,7 @@ r-cell[order="16"]  { order: 16 }
 }
 
 
-@media (max-width: 40rem) {
+@media (max-width: 905px) {
   r-grid[columns-s="1"] { --grid-tc: repeat(1, 1fr) }
   r-grid[columns-s="2"] { --grid-tc: repeat(2, 1fr) }
   r-grid[columns-s="3"] { --grid-tc: repeat(3, 1fr) }
@@ -506,7 +506,7 @@ r-cell[order="16"]  { order: 16 }
   r-cell[order-s="16"]  { order: 16 }
 }
 
-@media (max-width: 26rem) {
+@media (max-width: 600px) {
   r-grid[columns-xs="1"] { --grid-tc: repeat(1, 1fr) }
   r-grid[columns-xs="2"] { --grid-tc: repeat(2, 1fr) }
   r-grid[columns-xs="3"] { --grid-tc: repeat(3, 1fr) }
@@ -677,7 +677,7 @@ r-grid.debug > :nth-child(6n+7) { --color: rgba(248,110,91 ,0.3) }
   column-count: 8
 }
 
-@media only screen and (max-width: 100rem) {
+@media only screen and (max-width: 1600px) { /*100rem*/
   [flow-cols-xl="1"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -727,7 +727,7 @@ r-grid.debug > :nth-child(6n+7) { --color: rgba(248,110,91 ,0.3) }
   }
 }
 
-@media only screen and (max-width: 90rem) {
+@media only screen and (max-width: 1440px) { /*90rem*/
   [flow-cols-l="1"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -777,7 +777,7 @@ r-grid.debug > :nth-child(6n+7) { --color: rgba(248,110,91 ,0.3) }
   }
 }
 
-@media only screen and (max-width: 64rem) {
+@media only screen and (max-width: 1240px) { /*64rem*/
   [flow-cols-m="1"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -827,7 +827,7 @@ r-grid.debug > :nth-child(6n+7) { --color: rgba(248,110,91 ,0.3) }
   }
 }
 
-@media only screen and (max-width: 40rem) {
+@media only screen and (max-width: 905px) { /* 40rem*/
   [flow-cols-s="1"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -877,7 +877,7 @@ r-grid.debug > :nth-child(6n+7) { --color: rgba(248,110,91 ,0.3) }
   }
 }
 
-@media only screen and (max-width: 26rem) {
+@media only screen and (max-width: 600px) { /*26rem*/
   [flow-cols-xs="1"] {
     -webkit-column-count: 1;
     -moz-column-count: 1;

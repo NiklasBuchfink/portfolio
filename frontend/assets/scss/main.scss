@@ -1,6 +1,9 @@
 html, body {
   font-family: $font-family-base;
-  font-size: $font-size-base;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  @media screen and (max-width: $max_width_s) {
+    @include fluid-type($min_width_xs, $max_width_s, $min_font, $max_font);
+  }
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

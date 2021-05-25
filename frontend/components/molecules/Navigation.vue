@@ -1,11 +1,11 @@
 <template>
   <nav class="navigation">
     <ul>
-      <li>
+      <!-- <li>
         <NuxtLink to="/projects">
           <p>Projects</p>
         </NuxtLink>
-      </li>
+      </li> -->
       <li>
         <NuxtLink to="/about">
           <p>About</p>

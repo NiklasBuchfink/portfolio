@@ -3,8 +3,7 @@
     <div class="copyright">2021 © Niklas Buchfink</div>
     <div class="socialmediaLinks">
       <a href="https://www.linkedin.com/in/niklas-buchfink/" class="linkedIn">LinkedIn</a>
-      <a href="" class="twitter">Twitter</a>
-      <a href="" class="gitlab">GitLab</a>
+      <a href="https://twitter.com/NBuchfink" class="twitter">Twitter</a>
     </div>
     <div class="lawLinks">
       <NuxtLink to="/legal">Legal</NuxtLink>
@@ -22,20 +21,33 @@ export default {}
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  width: 100vw;
+  width: 100%;
   padding: 0rem 3.375rem;
   background-color: $color-darkgray;
   @include footer-text;
   color: $color-lightgray;
+  @media screen and (max-width: $max_width_xs) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    height: 8rem;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
   .socialmediaLinks {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    @media screen and (max-width: $max_width_xs) {
+      gap: 1rem;
+    }
   }
   .lawLinks {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    @media screen and (max-width: $max_width_xs) {
+      gap: 1rem;
+    }
   }
 }
 </style>

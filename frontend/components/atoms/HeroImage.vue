@@ -28,23 +28,50 @@ export default {
 
 <style lang="scss" scoped>
 .tileImage {
+  position: relative;
+  left: 5rem;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: $max_width_s) {
+    left:3rem;
+  }
+  @media screen and (max-width: $max_width_xs) {
+    width: 60%;
+    height: 60%;
+    left: 2rem;
+  }
   .tile {
     display: flex;
     @include shadow-card;
     background: linear-gradient(135deg, rgba($rgb-darkgray, 0.8) 0%, $color-darkgray 100%);
     border-radius: 2rem;
-    width: 27rem;
-    height: 27rem;
+    width: 100%;
+    height: 100%;
+    max-width: 27rem;
+    max-height: 27rem;
+    aspect-ratio: 1 / 1;
     transform: rotate(-20deg);
     span {
       @include highlight-text;
+      font-size: 6vw;
       color: $color-white;
       padding: 0.75rem 0rem 0rem 2rem;
+      @media screen and (max-width: $max_width_s) {
+        font-size: 8vw;
+      }
+      @media screen and (max-width: $max_width_xs) {
+        padding: 0.75rem 0rem 0rem 1.5rem;
+      }
     }
     .mask {
       position: absolute;
-      width: 33rem;
-      height: 33rem;
+      left: 0;
+      bottom: -6rem;
+      width: 100%;
+      height: 130%;
+      max-width: 33rem;
+      max-height: 33rem;
+      aspect-ratio: 1 / 1;
       border-radius: 2rem;
       overflow: hidden;
       transform: translate(0rem, -6rem);
@@ -52,8 +79,15 @@ export default {
       img {
         position: absolute;
         object-fit: cover;
-        width: 32.5rem;
-        transform: translate(-2rem, 2rem) rotate(20deg);
+        width: 120%;
+        max-width: 32.5rem;
+        transform: translate(-2rem, 0.5rem) rotate(20deg);
+        @media screen and (max-width: $max_width_s) {
+          transform: translate(-1.25rem, 2rem) rotate(20deg);
+        }
+        @media screen and (max-width: $max_width_xs) {
+          transform: translate(-0.5rem, 2rem) rotate(20deg);
+        }
       }
     }
   }
