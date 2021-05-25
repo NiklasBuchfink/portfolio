@@ -1,14 +1,9 @@
 <template>
   <nav class="navigation">
     <ul>
-      <!-- <li>
-        <NuxtLink to="/projects">
-          <p>Projects</p>
-        </NuxtLink>
-      </li> -->
       <li>
-        <NuxtLink to="/about">
-          <p>About</p>
+        <NuxtLink :to="link">
+          <slot></slot>
         </NuxtLink>
       </li>
     </ul>
@@ -16,7 +11,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  props:
+  [
+    'link',
+  ],
+}
 </script>
 
 <style lang="scss" scoped>
@@ -29,10 +29,8 @@ export default {}
     align-items: flex-end;
     li {
       margin-bottom: 0.5rem;
-      p {
-        @include menu;
-        text-align: right;
-      }
+      @include menu;
+      text-align: right;
     }
   }
 }

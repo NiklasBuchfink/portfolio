@@ -6,7 +6,11 @@
           <Logo />
         </div>
         <div class="actions-right">
-          <Navigation />
+          <Navigation
+            :link="'/about'"
+          >
+            About
+          </Navigation>
         </div>
       </div>
       <Nuxt class="slot" />

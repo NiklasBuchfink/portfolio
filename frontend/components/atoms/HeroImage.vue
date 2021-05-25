@@ -36,6 +36,11 @@ export default {
     left:3rem;
   }
   @media screen and (max-width: $max_width_xs) {
+    width: 70%;
+    height: 70%;
+    left: 0rem;
+  }
+  @media screen and (max-width: 374px) {
     width: 60%;
     height: 60%;
     left: 2rem;

@@ -58,10 +58,10 @@ export default {
       }
       .chatIconLg {
         display: inline-block;
-        -webkit-mask-image: $chat-lg;
+        mask-image: $chat-lg;
         background-color: $color-white;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-size: contain;
         margin-top: 1.25rem;
         height: 5rem;
         width: 5rem;
