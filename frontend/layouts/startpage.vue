@@ -61,10 +61,10 @@ main {
   width: calc(100vw - 20rem);
   height: 100%;
   margin: 0 auto;
+  // @media screen and (max-width: $max_width_s) {
+  //   width: calc(100vw - 6.75rem);
+  // }
   @media screen and (max-width: $max_width_s) {
-    width: calc(100vw - 6.75rem);
-  }
-  @media screen and (max-width: $max_width_xs) {
     width: calc(100vw - 4rem);
   }
 }

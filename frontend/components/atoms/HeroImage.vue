@@ -40,7 +40,7 @@ export default {
     height: 70%;
     left: 0rem;
   }
-  @media screen and (max-width: 374px) {
+  @media screen and (max-width: $max_width_xxs) {
     width: 60%;
     height: 60%;
     left: 2rem;

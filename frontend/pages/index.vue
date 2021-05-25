@@ -1,7 +1,7 @@
 <template>
   <div>
     <r-grid class="frontpageGrid" columns="12" columns-s="8" columns-xs="4">
-      <r-cell span="6" span-s="2+6" span-xs="1..">
+      <r-cell class="headerContentCell" span="6" span-s="2+6" span-xs="1..">
         <div class="frontpageHeaderItem">
           <p class="name">Niklas Buchfink</p>
           <h1>
@@ -22,8 +22,10 @@
           <HeroImage :heroimage="startpage.heroimage" />
         </div>
       </r-cell>
-      <!-- <r-cell
+      <r-cell
         span="12"
+        span-s="2+6"
+        span-xs="1+4"
         class="cards"
         v-for="project in projects"
         v-bind:key="project.id"
@@ -31,7 +33,7 @@
         <div class="cardWrapper" v-if="project.startpage">
           <Card :project="project" />
         </div>
-      </r-cell> -->
+      </r-cell>
     </r-grid>
   </div>
 </template>
@@ -65,23 +67,30 @@ export default {
   height: 100%;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: $max_width_s) {
-      height: 100vh;
-  }
   r-cell {
     display: flex;
     align-items: center;
-    height: 100vh;
-    @media screen and (max-width: $max_width_s) {
-      height: auto;
+    &.headerContentCell {
+      height: 100vh;
+      @media screen and (max-width: $max_width_s) {
+        height: 50vh;
+      }
+      @media screen and (max-width: $max_width_xs) {
+        height: 70vh;
+      }
     }
 
     &.heroImageCell {
       align-items: center;
       justify-content: center;
+      height: 100vh;
       @media screen and (max-width: $max_width_s) {
         margin-top: 4rem;
         margin-bottom: -4rem;
+        height: 50vh;
+      }
+      @media screen and (max-width: $max_width_xs) {
+        height: 30vh;
       }
     }
   }
@@ -119,9 +128,6 @@ export default {
     align-items: center;
     width: 100%;
     max-width: 34.5rem;
-  }
-  .cardWrapper {
-    width: 100%;
   }
 }
 </style>

@@ -35,11 +35,17 @@ export default {
   justify-content: flex-end;
   align-items: flex-start;
   gap: 2rem;
-  height: 34.5rem;
-  width: 28.5rem;
-  // padding-left: 4rem;
+  max-width: 28.5rem;
+  width: 100%;
   padding-bottom: 2rem;
-
+  @media screen and (max-width: $max_width_s) {
+    padding-top: 4rem;
+    max-width: 60rem;
+    padding-bottom: 0rem;
+  }
+  @media screen and (max-width: $max_width_xs) {
+    padding-top: 2rem;
+  }
   .title {
     @include headline-3;
     @include shadow-text;

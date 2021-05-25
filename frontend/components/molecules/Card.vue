@@ -1,22 +1,24 @@
 <template>
-  <r-grid columns="12" columns-s="4" class="card">
-    <r-cell span="6" span-s="4">
-      <a :href="project.link" target="blank">
-        <CardImage
-          :letter="project.letter"
-          :image="project.image"
-          :color="project.color"
+  <div class="card">
+    <r-grid columns="12" columns-xs="4" class="cardContainer">
+      <r-cell span="6" span-s="2+10" span-xs="1+4">
+        <a :href="project.link" target="blank">
+          <CardImage
+            :letter="project.letter"
+            :image="project.image"
+            :color="project.color"
+          />
+        </a>
+      </r-cell>
+      <r-cell span="8+5" span-s="2+10" order="+1" span-xs="1+4"  class="cardContentCell">
+        <CardContent
+          :title="project.title"
+          :subtitle="project.subtitle"
+          :categories="project.categories"
         />
-      </a>
-    </r-cell>
-    <r-cell span="8+5" span-s="4">
-      <CardContent
-        :title="project.title"
-        :subtitle="project.subtitle"
-        :categories="project.categories"
-      />
-    </r-cell>
-  </r-grid>
+      </r-cell>
+    </r-grid>
+  </div>
 </template>
 
 <script>
@@ -27,10 +29,18 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  height: 100vh;
-  //display: flex;
-  //flex-direction: row;
-  //justify-content: space-between;
+  display: flex;
   align-items: center;
+  height: 100vh;
+  // @media screen and (max-width: $max_width_xs) {
+  //   align-items: flex-end;
+  // }
+  .cardContainer {
+    height: auto;
+    .cardContentCell {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }
 </style>

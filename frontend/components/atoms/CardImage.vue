@@ -45,13 +45,26 @@ export default {
 
 <style lang="scss" scoped>
 .cardImage {
+  width: 100%;
+  @media screen and (max-width: $max_width_xs) {
+    margin-top: 2rem;
+  }
+  @media screen and (max-width: $max_width_xxs) {
+    width: 90%;
+  }
   .cardShape {
+    position: relative;
     display: flex;
     @include shadow-card;
     background: linear-gradient(135deg, rgba(var(--project-color), 0.8) 0%, rgb(var(--project-color)) 100%);
     border-radius: 2rem;
-    width: 34.5rem;
-    height: 34.5rem;
+    max-width: 34.5rem;
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: $max_width_s) {
+      max-width: 60rem;
+    }
     span {
       @include highlight-text;
       color: $color-white;
@@ -61,8 +74,12 @@ export default {
       position: absolute;
       object-fit: cover;
       @include shadow-mockup;
-      height: 34.5rem;
-      width: 34.5rem;
+      max-width: 34.5rem;
+      aspect-ratio: 1/1;
+      width: 100%;
+      @media screen and (max-width: $max_width_s) {
+        max-width: 60rem;
+      }
     }
   }
 }
