@@ -58,7 +58,7 @@ export default {
     transform: rotate(-20deg);
     span {
       @include highlight-text;
-      font-size: 6vw;
+      font-size: 6rem;
       color: $color-white;
       padding: 0.75rem 0rem 0rem 2rem;
       @media screen and (max-width: $max_width_s) {
@@ -66,6 +66,10 @@ export default {
       }
       @media screen and (max-width: $max_width_xs) {
         padding: 0.75rem 0rem 0rem 1.5rem;
+        font-size: 10vw;
+      }
+      @media screen and (max-width: $max_width_xxs) {
+        font-size: 8vw;
       }
     }
     .mask {

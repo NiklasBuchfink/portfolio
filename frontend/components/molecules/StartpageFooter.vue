@@ -35,6 +35,9 @@ export default {
     height: 25rem;
     max-width: 1440px;
     margin: auto auto;
+    @media screen and (min-width: $max_width) {
+      width: calc(90rem - 20rem);
+    }
     @media screen and (max-width: $max_width_s) {
       width: calc(100vw - 6.75rem);
     }
@@ -66,10 +69,6 @@ export default {
         height: 5rem;
         width: 5rem;
         padding: 0.75rem;
-        // background-image: $chat-lg;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position: center center;
         @media screen and (max-width: $max_width_s) {
           height: 3.25rem;
           width: 3.25rem;

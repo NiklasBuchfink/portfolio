@@ -67,8 +67,15 @@ export default {
     }
     span {
       @include highlight-text;
+      font-size: 6rem;
       color: $color-white;
       padding: 0.75rem 0rem 0rem 2rem;
+      @media screen and (max-width: $max_width_s) {
+        font-size: 6rem;
+      }
+      @media screen and (max-width: $max_width_xxs) {
+        font-size: 5rem;
+      }
     }
     img {
       position: absolute;
