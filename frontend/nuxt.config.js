@@ -1,5 +1,5 @@
 
-const strapiBaseUri = process.env.API_URL || "http://localhost:1337";
+const strapiBaseUri = process.env.BACKEND_BASE_URL || "http://localhost:1337";
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -18,8 +18,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Niklas Buchfink' },
-      { name: 'description', content: 'Portfolio | Niklas Buchfink' },
-      { name: 'keywords', content: 'Design, Engineering, Portfolio' },
+      { name: 'description', content: 'I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
       { name: 'robots', content: 'noindex'}
     ],
     link: [
@@ -54,8 +53,10 @@ export default {
     '@nuxtjs/emotion',
     // https://github.com/nuxt-community/apollo-module
     '@nuxtjs/apollo',
-    // https://github.com/Developmint/nuxt-webfontloade
+    // https://github.com/Developmint/nuxt-webfontloader
     'nuxt-webfontloader',
+    // https://github.com/vaso2/fullpage-nuxt
+    // 'fullpage-nuxt',
   ],
 
   apollo: {
