@@ -18,8 +18,16 @@ export const projectQuery = gql`
 export const startpageQuery = gql`
   query startpageQuery {
     startpage{
-      id
       heroimage {alternativeText, formats}
+    }
+  }
+`
+
+export const aboutpageQuery = gql`
+  query aboutpageQuery{
+    aboutpage{
+      headerparagraph
+      headerimage{alternativeText, formats}
     }
   }
 `

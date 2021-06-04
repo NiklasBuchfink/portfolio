@@ -18,5 +18,6 @@ export default {}
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 2rem 1.75rem;
+  object-fit: cover;
 }
 </style>

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { getStrapiMedia } from "~/utils/medias";
+import { getStrapiMedia, hexRgb } from "~/utils/medias";
 
 export default {
   props:
@@ -25,19 +25,9 @@ export default {
   },
   computed: {
     colorGradient () {
-      let hex = this.color;
-      let c;
-      if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-        c= hex.substring(1).split('');
-        if(c.length== 3){
-            c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-        }
-        c= '0x'+c.join('');
-        return {
-          '--project-color': [(c>>16)&255, (c>>8)&255, c&255].join(',')
-        }
+      return {
+        '--project-color': hexRgb(this.color),
       }
-      throw new Error('Bad Hex');
     }
   }
 }
