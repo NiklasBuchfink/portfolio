@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_info_section_headline_with_texts",
+  "info": {
+    "name": "headlineWithText",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

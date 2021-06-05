@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "legalpages",
+  "info": {
+    "name": "Legalpage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "contentblock": {
+      "type": "dynamiczone",
+      "components": [
+        "info-section.headline-with-text"
+      ]
+    }
+  }
+}

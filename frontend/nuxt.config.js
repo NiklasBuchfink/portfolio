@@ -55,8 +55,6 @@ export default {
     '@nuxtjs/apollo',
     // https://github.com/Developmint/nuxt-webfontloader
     'nuxt-webfontloader',
-    // https://github.com/vaso2/fullpage-nuxt
-    // 'fullpage-nuxt',
   ],
 
   apollo: {

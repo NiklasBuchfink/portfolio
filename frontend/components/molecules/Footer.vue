@@ -30,7 +30,7 @@ export default {}
     flex-direction: column-reverse;
     align-items: flex-start;
     height: 8rem;
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 2rem;
     gap: 1rem;
   }
   .socialmediaLinks {

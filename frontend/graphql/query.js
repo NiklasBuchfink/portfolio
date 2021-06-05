@@ -31,3 +31,25 @@ export const aboutpageQuery = gql`
     }
   }
 `
+
+export const legalpageQuery = gql`
+  query legalpageQuery{
+    legalpage{
+      contentblock{
+        ... on ComponentInfoSectionHeadlineWithText
+        {id, headline, text}
+      }
+    }
+  }
+`
+
+export const privacypageQuery = gql`
+  query privacypageQuery{
+    privacypage{
+      contentblock{
+        ... on ComponentInfoSectionHeadlineWithText
+        {id, headline, text}
+      }
+    }
+  }
+`

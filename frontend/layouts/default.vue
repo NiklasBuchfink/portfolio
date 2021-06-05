@@ -20,16 +20,7 @@
 </template>
 
 <script>
-export default {
-  head() {
-    return {
-      title: 'About',
-      meta: [
-        { name: 'description', content: 'Hello, I/’m Niklas. Let me tell you a little bit about myself.' },
-      ]
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>

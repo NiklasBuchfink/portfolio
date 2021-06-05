@@ -6,7 +6,7 @@
           Who I am
         </h1>
         <p>
-          I’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development. I’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development.
+          {{aboutpage.headerparagraph}} 
         </p>
       </r-cell>
       <r-cell class="aboutTitleImage" span="8-12" span-s="2+6" span-xs="1-4">
@@ -19,6 +19,14 @@
 import { aboutpageQuery } from '~/graphql/query'
 
 export default {
+  head() {
+    return {
+      title: 'About',
+      meta: [
+        { name: 'description', content: 'Hello, I/’m Niklas. Let me tell you a little bit about myself.' },
+      ]
+    }
+  },
   data() {
     return {
       aboutpage: [],
