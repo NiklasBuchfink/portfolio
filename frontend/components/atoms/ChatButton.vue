@@ -20,6 +20,9 @@ export default {}
   width: auto;
   color: $color-white;
   .chatIcon {
+    @supports not (gap: 1rem) {
+      margin-right: 1rem;
+    }
     height: 2rem;
     width: 2rem;
     background-image: $chat;

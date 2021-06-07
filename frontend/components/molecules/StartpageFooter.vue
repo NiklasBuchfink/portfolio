@@ -69,6 +69,13 @@ export default {
         height: 5rem;
         width: 5rem;
         padding: 0.75rem;
+        @supports not (gap: 1rem) {
+          margin-right: 1.25rem;
+          @media screen and (max-width: $max_width_xs) {
+            margin-right: 0;
+            margin-bottom: 1.25rem;
+          }
+        }
         @media screen and (max-width: $max_width_s) {
           height: 3.25rem;
           width: 3.25rem;

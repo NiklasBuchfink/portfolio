@@ -42,6 +42,9 @@ export default {
     padding-top: 4rem;
     max-width: 60rem;
     padding-bottom: 0rem;
+    @supports not (gap: 2rem) {
+      margin-bottom: 2rem;
+    }
   }
   @media screen and (max-width: $max_width_xs) {
     padding-top: 2rem;
@@ -50,17 +53,28 @@ export default {
     @include headline-3;
     @include shadow-text;
     color: rgba($rgb-darkgray, 0.7);
+    @supports not (gap: 2rem) {
+      margin-bottom: 2rem;
+    }
   }
   .subtitle {
     @include headline-2;
     @include shadow-text;
     color: $color-gray;
+    @supports not (gap: 2rem) {
+      margin-bottom: 2rem;
+    }
   }
   .categories {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1rem;
+    .categorie {
+      @supports not (gap: 1rem) {
+        margin-right: 1rem;
+      }
+    }
   }
 }
 </style>

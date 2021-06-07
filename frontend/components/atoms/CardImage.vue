@@ -50,12 +50,15 @@ export default {
     border-radius: 2rem;
     max-width: 34.5rem;
     aspect-ratio: 1/1;
+    @supports not (aspect-ratio: 1 / 1) {
+      padding-bottom: 100%;
+    }
     width: 100%;
-    height: 100%;
     @media screen and (max-width: $max_width_s) {
       max-width: 60rem;
     }
     span {
+      position: absolute;
       @include highlight-text;
       font-size: 6rem;
       color: $color-white;
@@ -72,7 +75,14 @@ export default {
       object-fit: cover;
       @include shadow-mockup;
       max-width: 34.5rem;
+      max-height: 34.5rem;
+      @media screen and (max-width: $max_width_s) {
+        max-height: 60rem;
+      }
       aspect-ratio: 1/1;
+      @supports not (aspect-ratio: 1 / 1) {
+         height: 100%;
+      }
       width: 100%;
       @media screen and (max-width: $max_width_s) {
         max-width: 60rem;

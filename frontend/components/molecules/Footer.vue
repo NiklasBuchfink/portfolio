@@ -6,8 +6,8 @@
       <a href="https://twitter.com/NBuchfink"  target="blank" class="twitter">Twitter</a>
     </div>
     <div class="lawLinks">
-      <NuxtLink to="/legal">Legal</NuxtLink>
-      <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
+      <NuxtLink to="/legal" class="legal">Legal</NuxtLink>
+      <NuxtLink to="/privacy" class="privacy">Privacy Policy</NuxtLink>
     </div>
   </div>
 </template>
@@ -27,11 +27,15 @@ export default {}
   @include footer-text;
   color: $color-lightgray;
   @media screen and (max-width: $max_width_xs) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: flex-start;
     height: 8rem;
     padding: 1rem 2rem;
-    gap: 1rem;
+  }
+  .copyright {
+    @media screen and (max-width: $max_width_xs) {
+      order: 3;
+    }
   }
   .socialmediaLinks {
     display: flex;
@@ -39,6 +43,15 @@ export default {}
     gap: 2rem;
     @media screen and (max-width: $max_width_xs) {
       gap: 1rem;
+      order: 1;
+    }
+    .linkedIn {
+      @supports not (gap: 2rem) {
+        margin-right: 2rem;
+        @media screen and (max-width: $max_width_xs) {
+          margin-right: 1rem;
+        }
+      }
     }
   }
   .lawLinks {
@@ -47,6 +60,15 @@ export default {}
     gap: 2rem;
     @media screen and (max-width: $max_width_xs) {
       gap: 1rem;
+      order: 2;
+    }
+    .legal {
+      @supports not (gap: 2rem) {
+        margin-right: 2rem;
+        @media screen and (max-width: $max_width_xs) {
+          margin-right: 1rem;
+        }
+      }
     }
   }
 }

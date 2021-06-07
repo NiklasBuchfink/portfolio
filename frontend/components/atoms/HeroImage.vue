@@ -46,6 +46,7 @@ export default {
     left: 2rem;
   }
   .tile {
+    position: relative;
     display: flex;
     @include shadow-card;
     background: linear-gradient(135deg, rgba($rgb-darkgray, 0.8) 0%, $color-darkgray 100%);
@@ -55,8 +56,15 @@ export default {
     max-width: 27rem;
     max-height: 27rem;
     aspect-ratio: 1 / 1;
+    @supports not (aspect-ratio: 1 / 1) {
+      padding-bottom: 27rem;
+      @media screen and (max-width: $max_width_s) {
+        padding-bottom: 100%;
+      }
+    }
     transform: rotate(-20deg);
     span {
+      position: absolute;
       @include highlight-text;
       font-size: 6rem;
       color: $color-white;
@@ -81,6 +89,9 @@ export default {
       max-width: 33rem;
       max-height: 33rem;
       aspect-ratio: 1 / 1;
+      @supports not (aspect-ratio: 1 / 1) {
+        padding-bottom: 100%;
+      }
       border-radius: 2rem;
       overflow: hidden;
       transform: translate(0rem, -6rem);
