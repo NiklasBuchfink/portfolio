@@ -64,9 +64,5 @@ main {
     width: calc(100vw - 4rem);
   }
 }
-.smallFooter {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
+
 </style>

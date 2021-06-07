@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_page_linkedin_references",
+  "info": {
+    "name": "LinkedinReference",
+    "icon": "arrow-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "linktext": {
+      "type": "string"
+    },
+    "linkadress": {
+      "type": "string"
+    }
+  }
+}

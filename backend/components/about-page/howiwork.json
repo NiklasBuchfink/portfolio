@@ -1,13 +1,13 @@
 {
-  "collectionName": "components_info_section_headline_with_texts",
+  "collectionName": "components_about_page_howiworks",
   "info": {
-    "name": "headlineWithText",
-    "icon": "align-left",
+    "name": "HowIWork",
+    "icon": "align-center",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "headline": {
+    "subtitle": {
       "type": "string"
     },
     "text": {

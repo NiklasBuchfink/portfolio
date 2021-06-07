@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_about_page_programming_tools",
+  "info": {
+    "name": "ProgrammingTools",
+    "icon": "desktop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

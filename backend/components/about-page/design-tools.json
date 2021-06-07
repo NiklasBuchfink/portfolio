@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_about_page_design_tools",
+  "info": {
+    "name": "DesignTools",
+    "icon": "eye-dropper",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

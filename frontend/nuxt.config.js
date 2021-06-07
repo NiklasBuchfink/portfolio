@@ -13,13 +13,15 @@ export default {
     title: 'Niklas Buchfink - Designer & Engineer',
     htmlAttrs: {
       lang: 'en',
+      amp: true
     },
+    
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Niklas Buchfink' },
-      { name: 'description', content: 'I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
-      { name: 'robots', content: 'noindex'}
+      { hid: 'description', name: 'description', content: 'I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
+      { name: 'robots', content: 'noindex'},
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -55,6 +57,8 @@ export default {
     '@nuxtjs/apollo',
     // https://github.com/Developmint/nuxt-webfontloader
     'nuxt-webfontloader',
+    // https://github.com/nuxt-community/markdownit-module
+    '@nuxtjs/markdownit',
   ],
 
   apollo: {
@@ -64,6 +68,13 @@ export default {
           process.env.BACKEND_URL || 'http://localhost:1337/graphql',
       },
     },
+  },
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   },
 
   styleResources: {

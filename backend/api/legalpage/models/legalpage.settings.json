@@ -11,11 +11,8 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "contentblock": {
-      "type": "dynamiczone",
-      "components": [
-        "info-section.headline-with-text"
-      ]
+    "content": {
+      "type": "richtext"
     }
   }
 }

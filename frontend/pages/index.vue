@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head title="Niklas Buchfink - Designer & Engineer" description="I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development." />
     <r-grid class="frontpageGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="headerContentCell" span="6" span-s="2+6" span-xs="1..">
         <div class="frontpageHeaderItem">
@@ -41,7 +42,7 @@
 import { projectQuery, startpageQuery } from '~/graphql/query'
 
 export default {
-  data() {
+ data() {
     return {
       projects: [],
       startpage: [],

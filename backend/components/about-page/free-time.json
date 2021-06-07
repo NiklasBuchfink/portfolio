@@ -1,17 +1,17 @@
 {
-  "collectionName": "components_gallery_landing_headers",
+  "collectionName": "components_about_page_free_times",
   "info": {
-    "name": "imageWithText",
-    "icon": "address-card",
+    "name": "FreeTime",
+    "icon": "guitar",
     "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
-      "type": "richtext"
+      "type": "text"
     },
     "image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -22,8 +22,15 @@
       "required": false,
       "pluginOptions": {}
     },
-    "imageRight": {
-      "type": "boolean"
+    "linkadress": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "unique": true
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

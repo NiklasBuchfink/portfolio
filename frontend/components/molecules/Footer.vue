@@ -2,8 +2,8 @@
   <div class="footer">
     <div class="copyright">2021 © Niklas Buchfink</div>
     <div class="socialmediaLinks">
-      <a href="https://www.linkedin.com/in/niklas-buchfink/" class="linkedIn">LinkedIn</a>
-      <a href="https://twitter.com/NBuchfink" class="twitter">Twitter</a>
+      <a href="https://www.linkedin.com/in/niklas-buchfink/"  target="blank" class="linkedIn">LinkedIn</a>
+      <a href="https://twitter.com/NBuchfink"  target="blank" class="twitter">Twitter</a>
     </div>
     <div class="lawLinks">
       <NuxtLink to="/legal">Legal</NuxtLink>

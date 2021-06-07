@@ -2,7 +2,8 @@
   "kind": "singleType",
   "collectionName": "aboutpages",
   "info": {
-    "name": "Aboutpage"
+    "name": "Aboutpage",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -24,6 +25,41 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "HowIWork": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.howiwork"
+    },
+    "WorkExperience": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.work-experience"
+    },
+    "Education": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.education"
+    },
+    "Volunteering": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.volunteering"
+    },
+    "FreeTime": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.free-time"
+    },
+    "DesignTools": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.design-tools"
+    },
+    "ProgrammingTools": {
+      "type": "component",
+      "repeatable": true,
+      "component": "about-page.programming-tools"
     }
   }
 }

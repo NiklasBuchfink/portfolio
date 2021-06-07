@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Head title="Privacy Policy" description="Privacy Statement of the portfolio page of Niklas Buchfink" />
     <r-grid class="privacyGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="privacyHeadline" span="8" span-s="2+6" span-xs="1-4">
         <h1>
@@ -8,9 +9,10 @@
       </r-cell>
 
       <r-cell class="privacyContent" span="6" span-s="2+6" span-xs="1-4">
-        <div v-for="content in privacypage.contentblock" :key="content.id">
-          <h2>{{content.headline}}</h2>
-          <p>{{content.text}}</p>
+        <div 
+          v-if="privacypage.content" 
+          v-html="$md.render(privacypage.content)"
+        >
         </div>
       </r-cell>
     </r-grid>
@@ -20,14 +22,6 @@
 import { privacypageQuery } from '~/graphql/query'
 
 export default {
-  head() {
-    return {
-      title: 'Privacy',
-      meta: [
-        { name: 'description', content: 'Privacy Statement of the portfolio page of Niklas Buchfink' },
-      ]
-    }
-  },
   data() {
     return {
       privacypage: [],
