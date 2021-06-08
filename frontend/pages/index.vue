@@ -29,7 +29,7 @@
         span-xs="1+4"
         class="cards"
         v-for="project in projects"
-        v-bind:key="project.id"
+        v-bind:key="'Project' + project.id"
       >
         <div class="cardWrapper" v-if="project.startpage">
           <Card :project="project" />

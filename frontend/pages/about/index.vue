@@ -20,7 +20,7 @@
       </r-cell>
       <r-cell class="aboutHowIWorkContent" span="4" span-s="2+5" span-xs="1-3"
         v-for="item in aboutpage.HowIWork" 
-        :key="item.id"
+        :key="'HomIWork' + item.id"
       >
         <HowIWork
           :subtitle="item.subtitle"
@@ -34,7 +34,7 @@
         <div>
           <span 
             v-for="(item, index) in aboutpage.DesignTools"
-            :key="item.id"
+            :key="'DesignTools' + item.id"
           >
             <span
               v-if="index == aboutpage.DesignTools.length - 1"
@@ -56,7 +56,7 @@
         <div>
           <span 
             v-for="(item, index) in aboutpage.ProgrammingTools"
-            :key="item.id"
+            :key="'ProgrammingTools' + item.id"
           >
             <span
               v-if="index == aboutpage.ProgrammingTools.length - 1"
@@ -77,7 +77,8 @@
         </h2>
       </r-cell>
       <r-cell class="aboutWorkExperienceContent" span="12" span-s="8" span-xs="4"
-        v-for="item in aboutpage.WorkExperience" :key="item.id"
+        v-for="item in aboutpage.WorkExperience" 
+        :key="'WorkExperience' + item.id"
       >
         <TableItem 
           :title="item.title" 
@@ -94,7 +95,7 @@
       </r-cell>
       <r-cell class="aboutEducationContent" span="12" span-s="8" span-xs="4"
         v-for="item in aboutpage.Education" 
-        :key="item.id"
+        :key="'Education' + item.id"
       >
         <TableItem 
           :title="item.title" 
@@ -110,7 +111,8 @@
         </h2>
       </r-cell>
       <r-cell class="aboutVolunteeringContent" span="12" span-s="8" span-xs="4"
-        v-for="item in aboutpage.Volunteering" :key="item.id"
+        v-for="item in aboutpage.Volunteering"
+        :key="'Volunteering' + item.id"
       >
         <TableItem 
           :title="item.title" 
@@ -125,9 +127,9 @@
           Free Time
         </h2>
       </r-cell>
-      <r-cell class="aboutVolunteeringContent" span="12" span-s="8" span-xs="4"
+      <r-cell class="aboutFreeTimeContent" span="12" span-s="8" span-xs="4"
         v-for="item in aboutpage.FreeTime"
-        :key="item.id"
+        :key="'FreeTime' + item.id"
       >
         <r-grid v-if="item.order==1" class="freeTimeGrid" columns="12" columns-s="8" columns-xs="4">
           <r-cell class="freeTimeContent" span="1-4" span-s="2+6" span-xs="1-4">
