@@ -24,9 +24,7 @@
         </div>
       </r-cell>
       <r-cell
-        span="12"
-        span-s="2+6"
-        span-xs="1+4"
+        span="12" span-s="2+6" span-xs="1+4"
         class="cards"
         v-for="project in projects"
         v-bind:key="'Project' + project.id"

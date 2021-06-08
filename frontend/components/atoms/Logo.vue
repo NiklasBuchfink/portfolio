@@ -17,7 +17,7 @@ export default {}
   background-image: $logo-white;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 1.75rem 1.75rem;
-  object-fit: cover;
+  background-size: 1.75rem 1.5rem;
+  // object-fit: cover;
 }
 </style>
