@@ -4,6 +4,11 @@ html, body {
   @media screen and (max-width: $max_width_s) {
     @include fluid-type($min_width_xs, $max_width_s, $min_font, $max_font);
   }
+  --columnGap: 1.5rem;
+  // --rowGap: 1.5rem;
+  // --column-gap-compact: 1rem;
+  // --row-gap-compact: 1rem;
+
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

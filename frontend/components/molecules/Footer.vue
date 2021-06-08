@@ -26,6 +26,9 @@ export default {}
   background-color: $color-darkgray;
   @include footer-text;
   color: $color-lightgray;
+  @media screen and (max-width: $max_width_s) {
+    padding: 0rem 2rem;
+  }
   @media screen and (max-width: $max_width_xs) {
     flex-direction: column;
     align-items: flex-start;

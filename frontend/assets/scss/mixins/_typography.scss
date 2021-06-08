@@ -49,6 +49,9 @@
   font-size: $font-size-menu;
   font-weight: $font-weight-semibold;
   line-height: $line-height-menu;
+  @media screen and (max-width: $max_width_s) {
+  font-size: $font-size-menu-s;
+  }
 }
 
 @mixin footer-text {

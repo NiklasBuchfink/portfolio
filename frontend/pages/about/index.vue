@@ -18,30 +18,16 @@
           How I Work
         </h2>
       </r-cell>
-      <r-cell class="aboutHowIWorkContent" span="4" span-s="2+6" span-xs="4"
-        v-for="(item, index) in aboutpage.HowIWork" 
+      <r-cell class="aboutHowIWorkContent" span="4" span-s="2+5" span-xs="1-3"
+        v-for="item in aboutpage.HowIWork" 
         :key="item.id"
       >
-        <div v-if="index==0" class="HowIWorkOne">
-          <HowIWork
-            :subtitle="item.subtitle"
-            :text="item.text" 
-          />
-        </div>
-        <div v-else-if="index==1" class="HowIWorkTwo">
-          <HowIWork
-            :subtitle="item.subtitle"
-            :text="item.text" 
-          />
-        </div>
-        <div v-else-if="index==2" class="HowIWorkThree">
-          <HowIWork
-            :subtitle="item.subtitle"
-            :text="item.text" 
-          />
-        </div>
+        <HowIWork
+          :subtitle="item.subtitle"
+          :text="item.text" 
+        />
       </r-cell>
-      <r-cell class="aboutTools" span="2+4" span-s="8" span-xs="4">
+      <r-cell class="aboutTools" span="2+4" span-s="2-4" span-xs="1-4">
          <h3>
           My Design Tools
         </h3>
@@ -62,9 +48,8 @@
             </span>
           </span>
         </div>
-        
       </r-cell>
-      <r-cell class="aboutTools" span="8+4" span-s="4" span-xs="2-4">
+      <r-cell class="aboutTools" span="8+4" span-s="5-7" span-xs="1-4">
         <h3>
           My Programming Tools
         </h3>
@@ -86,9 +71,6 @@
           </span>
         </div>
       </r-cell>
-
-
-
       <r-cell class="aboutWorkTitle" span="12" span-s="2+6" span-xs="1-4">
         <h2>
           Work Experience
@@ -193,14 +175,19 @@ export default {
 
 <style lang="scss" scoped>
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 h3 {
   margin-bottom: 1rem;
 }
+p {
+  width: clamp(45ch, 75ch);
+}
 .aboutTitleContent{
   margin-top: 8rem;
-  margin-bottom: 8rem;
+  @media screen and (max-width: $max_width_s) {
+    margin-bottom: 0rem;
+  }
   h1 {
     margin-bottom: 2rem;
   }
@@ -211,26 +198,25 @@ h3 {
 .aboutTitleImage{
   margin-top: 8rem;
   width: 100%;
-  height: 20rem;
+  max-height: 20rem;
+  height: 25vw;
   @media screen and (max-width: $max_width_s) {
     margin-top: 4rem;
+    max-height: 28rem;
+    height: 50vw;
   }
-}
-.aboutHowIWorkContent{
-  .HowIWorkOne{
-    padding-right: 1rem;
-  }
-  .HowIWorkTwo{
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-  .HowIWorkThree{
-    padding-left: 1rem;
+  @media screen and (max-width: $max_width_xs) {
+    height: 60vw;
   }
 }
 .aboutTools{
-  margin-top: 6rem;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  @media screen and (max-width: $max_width_s) {
+    margin-top: 2rem;
+  }
   h3 {
     text-align: center;
   }
@@ -239,6 +225,9 @@ h3 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    @media screen and (max-width: $max_width_xs) {
+     width: 60vw;
+    }
     span {
       @include paragraph-large;
       color: $color-gray;
@@ -248,14 +237,16 @@ h3 {
     }
   }
 }
+.aboutHowIWorkTitle {
+  margin-top: 4rem;
+}
 .aboutWorkTitle {
   margin-top: 4rem;
 }
 .aboutFreeTimeTitle {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .freeTimeGrid{
-  height: 24rem;
   margin-bottom: 4rem;
   p {
     width: 90%;
@@ -266,7 +257,16 @@ h3 {
     justify-content: flex-end;
   }
   .freeTimeImage {
-    height: 100%;
+    max-height: 20rem;
+    height: 25vw;
+    @media screen and (max-width: $max_width_s) {
+      margin-top: 2rem;
+      max-height: 28rem;
+      height: 50vw;
+    }
+    @media screen and (max-width: $max_width_xs) {
+      height: 60vw;
+    }
   }
 }
 </style>
