@@ -18,6 +18,7 @@ export default {}
   border-radius: $box-radius;
   width: auto;
   color: $color-white;
+  transition: 0.3s;
   .chatIcon {
     margin-right: 1rem;
     height: 2rem;
@@ -27,5 +28,8 @@ export default {}
     background-size: auto auto;
     background-position: center center;
   }
+}
+.chatButton:hover {
+  opacity: 0.9;
 }
 </style>

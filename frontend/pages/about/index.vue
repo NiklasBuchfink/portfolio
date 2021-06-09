@@ -261,6 +261,7 @@ p {
   .freeTimeImage {
     max-height: 20rem;
     height: 25vw;
+    transition: 0.3s;
     @media screen and (max-width: $max_width_s) {
       margin-top: 2rem;
       max-height: 28rem;
@@ -269,6 +270,9 @@ p {
     @media screen and (max-width: $max_width_xs) {
       height: 60vw;
     }
+  }
+  .freeTimeImage:hover {
+    opacity: 0.9;
   }
 }
 </style>

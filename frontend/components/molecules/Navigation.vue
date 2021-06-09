@@ -31,6 +31,10 @@ export default {
       margin-bottom: 0.5rem;
       @include menu;
       text-align: right;
+      transition: 0.3s;
+    }
+    li:hover {
+      opacity: 0.7;
     }
   }
 }

@@ -35,7 +35,10 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    // https://github.com/micku7zu/vanilla-tilt.js
+    '~/plugins/vanilla-tilt.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
@@ -98,4 +101,8 @@ export default {
       ignoredElements: ['r-grid', 'r-cell'],
     }
   },
+
+  static: {
+    prefix: false
+  }
 }

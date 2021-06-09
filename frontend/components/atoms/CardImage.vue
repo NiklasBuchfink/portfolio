@@ -1,5 +1,5 @@
 <template>
-  <div class="cardImage">
+  <div class="cardImage" data-tilt data-tilt-scale="1.05">
     <div class="cardShape" :style="colorGradient">
       <span> {{letter}} </span>
       <img
@@ -35,12 +35,16 @@ export default {
 
 <style lang="scss" scoped>
 .cardImage {
+  transform-style: preserve-3d;
   width: 100%;
   @media screen and (max-width: $max_width_xs) {
     margin-top: 2rem;
   }
   @media screen and (max-width: $max_width_xxs) {
     width: 90%;
+  }
+  .js-tilt-glare {
+    border-radius: 2rem;
   }
   .cardShape {
     position: relative;
@@ -72,6 +76,7 @@ export default {
       }
     }
     img {
+      transform: translateZ(50px);
       position: absolute;
       object-fit: cover;
       @include shadow-mockup;

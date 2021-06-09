@@ -42,7 +42,7 @@
 import { projectQuery, startpageQuery } from '~/graphql/query'
 
 export default {
- data() {
+  data() {
     return {
       projects: [],
       startpage: [],

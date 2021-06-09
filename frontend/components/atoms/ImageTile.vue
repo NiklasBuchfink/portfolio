@@ -24,5 +24,6 @@ export default {
   @include shadow-image;
   border-radius: 2rem;
   background-size: cover;
+  background-position: center;
 }
 </style>

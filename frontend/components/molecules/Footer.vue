@@ -52,6 +52,9 @@ export default {}
         margin-right: 1rem;
       }
     }
+    *:hover {
+      text-decoration: underline;
+    }
   }
   .lawLinks {
     display: flex;
@@ -64,6 +67,9 @@ export default {}
       @media screen and (max-width: $max_width_xs) {
         margin-right: 1rem;
       }
+    }
+    *:hover {
+      text-decoration: underline;
     }
   }
 }
