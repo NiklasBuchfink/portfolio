@@ -34,7 +34,9 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 2rem;
+  @supports (gap: 2rem) {
+    gap: 2rem;
+  }
   max-width: 28.5rem;
   width: 100%;
   padding-bottom: 2rem;
@@ -42,8 +44,9 @@ export default {
     padding-top: 4rem;
     max-width: 60rem;
     padding-bottom: 0rem;
-    @supports not (gap: 2rem) {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    @supports (gap: 2rem) {
+      margin-bottom: 0;
     }
   }
   @media screen and (max-width: $max_width_xs) {
@@ -53,26 +56,31 @@ export default {
     @include headline-3;
     @include shadow-text;
     color: rgba($rgb-darkgray, 0.7);
-    @supports not (gap: 2rem) {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    @supports (gap: 2rem) {
+      margin-bottom: 0;
     }
   }
   .subtitle {
     @include headline-2;
     @include shadow-text;
     color: $color-gray;
-    @supports not (gap: 2rem) {
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    @supports (gap: 2rem) {
+      margin-bottom: 0;
     }
   }
   .categories {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 1rem;
+    @supports (gap: 1rem) {
+      gap: 1rem;
+    }
     .categorie {
-      @supports not (gap: 1rem) {
-        margin-right: 1rem;
+      margin-right: 1rem;
+      @supports (gap: 1rem) {
+        margin-right: 0;
       }
     }
   }

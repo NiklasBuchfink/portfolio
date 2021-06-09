@@ -55,11 +55,15 @@ export default {
     height: 100%;
     max-width: 27rem;
     max-height: 27rem;
-    aspect-ratio: 1 / 1;
-    @supports not (aspect-ratio: 1 / 1) {
-      padding-bottom: 27rem;
+    padding-bottom: 27rem;
+    @media screen and (max-width: $max_width_s) {
+      padding-bottom: 100%;
+    }
+    @supports (aspect-ratio: 1 / 1) {
+      aspect-ratio: 1 / 1;
+      padding-bottom: 0;
       @media screen and (max-width: $max_width_s) {
-        padding-bottom: 100%;
+        padding-bottom: 0;
       }
     }
     transform: rotate(-20deg);
@@ -88,9 +92,10 @@ export default {
       height: 130%;
       max-width: 33rem;
       max-height: 33rem;
-      aspect-ratio: 1 / 1;
-      @supports not (aspect-ratio: 1 / 1) {
-        padding-bottom: 100%;
+      padding-bottom: 100%;
+      @supports (aspect-ratio: 1 / 1) {
+        aspect-ratio: 1 / 1;
+        padding-bottom: 0;
       }
       border-radius: 2rem;
       overflow: hidden;

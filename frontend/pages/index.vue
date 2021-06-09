@@ -14,7 +14,9 @@
             expertise in high fidelity prototyping and web development.
           </p>
           <div class="buttonWrapper">
-            <ChatButton />
+            <a href="mailto:hey@niklasbuchfink.com">
+              <ChatButton />
+            </a>
           </div>
         </div>
       </r-cell>

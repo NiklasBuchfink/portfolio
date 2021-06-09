@@ -3,9 +3,9 @@
     <div class="footerContainer">
       <span class="footerSloganOne">Let's create</span>
       <span class="footerSloganTwo">something great!</span>
-      <a>
+      <a href="mailto:hey@niklasbuchfink.com">
         <div class="chatIconLg"></div>
-        <span><u>hey@niklasbuchfink.de</u></span>
+        <span><u>hey@niklasbuchfink.com</u></span>
       </a>
     </div>
   </div>
@@ -54,7 +54,9 @@ export default {
       align-self: center;
       display: inline-flex;
       align-items: center;
-      gap: 1.25rem;
+      @supports (gap: 1.25rem) {
+        gap: 1.25rem;
+      }
       padding-top: 3.75rem;
       @media screen and (max-width: $max_width_xs) {
         flex-direction: column;
@@ -69,11 +71,15 @@ export default {
         height: 5rem;
         width: 5rem;
         padding: 0.75rem;
-        @supports not (gap: 1rem) {
-          margin-right: 1.25rem;
+        margin-right: 1.25rem;
+        @media screen and (max-width: $max_width_xs) {
+          margin-right: 0;
+          margin-bottom: 1.25rem;
+        }
+        @supports (gap: 1.25rem) {
+          margin-right: 0;
           @media screen and (max-width: $max_width_xs) {
-            margin-right: 0;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0;
           }
         }
         @media screen and (max-width: $max_width_s) {
@@ -89,6 +95,9 @@ export default {
       }
       @media screen and (max-width: $max_width_xs) {
         font-size: 2.5rem;
+      }
+      @media screen and (max-width: $max_width_xxs) {
+        font-size: 2rem;
       }
         u {
           text-decoration: none;

@@ -43,16 +43,24 @@ export default {}
   .socialmediaLinks {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    @supports (gap: 2rem) {
+      gap: 2rem;
+    }
     @media screen and (max-width: $max_width_xs) {
-      gap: 1rem;
+      @supports (gap: 1rem) {
+        gap: 1rem;
+      }
       order: 1;
     }
     .linkedIn {
-      @supports not (gap: 2rem) {
-        margin-right: 2rem;
-        @media screen and (max-width: $max_width_xs) {
-          margin-right: 1rem;
+      margin-right: 2rem;
+      @supports (gap: 2rem) {
+        margin-right: 0;
+      }
+      @media screen and (max-width: $max_width_xs) {
+        margin-right: 1rem;
+        @supports (gap: 1rem) {
+          margin-right: 0;
         }
       }
     }
@@ -60,16 +68,24 @@ export default {}
   .lawLinks {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    @supports (gap: 2rem) {
+      gap: 2rem;
+    }
     @media screen and (max-width: $max_width_xs) {
-      gap: 1rem;
+      @supports (gap: 1rem) {
+        gap: 1rem;
+      }
       order: 2;
     }
-    .legal {
-      @supports not (gap: 2rem) {
-        margin-right: 2rem;
-        @media screen and (max-width: $max_width_xs) {
-          margin-right: 1rem;
+    .legal {        
+      margin-right: 2rem;
+      @supports (gap: 2rem) {
+        margin-right: 0;
+      }
+      @media screen and (max-width: $max_width_xs) {
+        margin-right: 1rem;
+        @supports (gap: 1rem) {
+          margin-right: 0;
         }
       }
     }
