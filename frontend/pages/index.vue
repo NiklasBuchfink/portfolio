@@ -1,7 +1,7 @@
 <template>
   <div>
     <Head title="Niklas Buchfink - Designer & Engineer" description="I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development." />
-    <r-grid class="frontpageGrid" columns="12" columns-s="8" columns-xs="4">
+    <r-grid class="frontpageGrid section" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="headerContentCell" span="6" span-s="2+6" span-xs="1..">
         <div class="frontpageHeaderItem">
           <p class="name">Niklas Buchfink</p>
@@ -27,7 +27,7 @@
       </r-cell>
       <r-cell
         span="12" span-s="2+6" span-xs="1+4"
-        class="cards"
+        class="cards section"
         v-for="project in projects"
         v-bind:key="'Project' + project.id"
       >
@@ -46,6 +46,7 @@ export default {
     return {
       projects: [],
       startpage: [],
+      options: {},
     }
   },
   apollo: {

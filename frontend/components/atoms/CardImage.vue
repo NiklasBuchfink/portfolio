@@ -1,13 +1,14 @@
 <template>
-  <div class="cardImage" data-tilt data-tilt-scale="1.05">
-    <div class="cardShape" :style="colorGradient">
-      <span> {{letter}} </span>
-      <img
-        :src="getStrapiMedia(image.formats.medium.url)"
-        :alt="getStrapiMedia(image.alternativeText)"
-      />
+    <div class="cardImage" v-tilt="{scale: 1.05}">
+      <div class="cardShape" :style="colorGradient">
+        <span> {{letter}} </span>
+        <img
+          v-if="image != null"
+          :src="getStrapiMedia(image.formats.medium.url)"
+          :alt="getStrapiMedia(image.alternativeText)"
+        />
+      </div>
     </div>
-  </div>
 </template>
 
 <script>

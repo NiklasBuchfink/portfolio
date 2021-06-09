@@ -4,6 +4,7 @@
       <span>N</span>
       <div class="mask">
         <img class="heroImage"
+          v-if="heroimage != null"
           :src="getStrapiMedia(heroimage.formats.medium.url)"
           :alt="getStrapiMedia(heroimage.alternativeText)"
         />
@@ -21,7 +22,7 @@ export default {
     'heroimage',
   ],
   methods: {
-    getStrapiMedia,
+    getStrapiMedia
   },
 }
 </script>

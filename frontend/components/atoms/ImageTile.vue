@@ -1,5 +1,6 @@
 <template>
   <div class="imageTileContainer"
+    v-if="image != null"
     :style="backgroundImage(image)"
   >
   </div>

@@ -36,8 +36,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // https://github.com/micku7zu/vanilla-tilt.js
-    '~/plugins/vanilla-tilt.js'
+    // https://github.com/vanderb/vue-tilt.js
+    '~/plugins/vue-tilt.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

@@ -54,7 +54,8 @@ export default {
       align-self: center;
       display: inline-flex;
       align-items: center;
-      padding-top: 3.75rem;
+      margin-top: 3.75rem;
+      transition: 0.3s;
       @media screen and (max-width: $max_width_xs) {
         flex-direction: column;
       }
@@ -95,6 +96,9 @@ export default {
           border-bottom: 0.125rem solid $color-nearlywhite;
         }
       }
+    }
+    a:hover {
+      opacity: 0.5;
     }
   }
 }
