@@ -54,9 +54,6 @@ export default {
       align-self: center;
       display: inline-flex;
       align-items: center;
-      @supports (gap: 1.25rem) {
-        gap: 1.25rem;
-      }
       padding-top: 3.75rem;
       @media screen and (max-width: $max_width_xs) {
         flex-direction: column;
@@ -75,12 +72,6 @@ export default {
         @media screen and (max-width: $max_width_xs) {
           margin-right: 0;
           margin-bottom: 1.25rem;
-        }
-        @supports (gap: 1.25rem) {
-          margin-right: 0;
-          @media screen and (max-width: $max_width_xs) {
-            margin-bottom: 0;
-          }
         }
         @media screen and (max-width: $max_width_s) {
           height: 3.25rem;

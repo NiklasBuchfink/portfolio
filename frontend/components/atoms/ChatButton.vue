@@ -12,9 +12,6 @@ export default {}
 <style lang="scss" scoped>
 .chatButton {
   display: inline-flex;
-  @supports (gap: 1rem) {
-    gap: 1rem;
-  }
   padding: 0.75rem 1rem;
   @include button-text;
   @include shadow-black;
@@ -23,9 +20,6 @@ export default {}
   color: $color-white;
   .chatIcon {
     margin-right: 1rem;
-    @supports (gap: 1rem) {
-      margin-right: 0;
-    }
     height: 2rem;
     width: 2rem;
     background-image: $chat;

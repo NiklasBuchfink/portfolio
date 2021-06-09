@@ -34,9 +34,6 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  @supports (gap: 2rem) {
-    gap: 2rem;
-  }
   max-width: 28.5rem;
   width: 100%;
   padding-bottom: 2rem;
@@ -45,9 +42,6 @@ export default {
     max-width: 60rem;
     padding-bottom: 0rem;
     margin-bottom: 2rem;
-    @supports (gap: 2rem) {
-      margin-bottom: 0;
-    }
   }
   @media screen and (max-width: $max_width_xs) {
     padding-top: 2rem;
@@ -57,31 +51,20 @@ export default {
     @include shadow-text;
     color: rgba($rgb-darkgray, 0.7);
     margin-bottom: 2rem;
-    @supports (gap: 2rem) {
-      margin-bottom: 0;
-    }
   }
   .subtitle {
     @include headline-2;
     @include shadow-text;
     color: $color-gray;
     margin-bottom: 2rem;
-    @supports (gap: 2rem) {
-      margin-bottom: 0;
-    }
   }
   .categories {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    @supports (gap: 1rem) {
-      gap: 1rem;
-    }
     .categorie {
       margin-right: 1rem;
-      @supports (gap: 1rem) {
-        margin-right: 0;
-      }
+      margin-top: 1rem;
     }
   }
 }

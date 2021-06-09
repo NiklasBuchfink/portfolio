@@ -43,50 +43,26 @@ export default {}
   .socialmediaLinks {
     display: flex;
     flex-direction: row;
-    @supports (gap: 2rem) {
-      gap: 2rem;
-    }
     @media screen and (max-width: $max_width_xs) {
-      @supports (gap: 1rem) {
-        gap: 1rem;
-      }
       order: 1;
     }
     .linkedIn {
       margin-right: 2rem;
-      @supports (gap: 2rem) {
-        margin-right: 0;
-      }
       @media screen and (max-width: $max_width_xs) {
         margin-right: 1rem;
-        @supports (gap: 1rem) {
-          margin-right: 0;
-        }
       }
     }
   }
   .lawLinks {
     display: flex;
     flex-direction: row;
-    @supports (gap: 2rem) {
-      gap: 2rem;
-    }
     @media screen and (max-width: $max_width_xs) {
-      @supports (gap: 1rem) {
-        gap: 1rem;
-      }
       order: 2;
     }
     .legal {        
       margin-right: 2rem;
-      @supports (gap: 2rem) {
-        margin-right: 0;
-      }
       @media screen and (max-width: $max_width_xs) {
         margin-right: 1rem;
-        @supports (gap: 1rem) {
-          margin-right: 0;
-        }
       }
     }
   }
