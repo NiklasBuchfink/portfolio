@@ -18,6 +18,7 @@
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
     "nuxt": "^2.15.3",
+    "vue-intersection-observer": "^0.1.7",
     "vue-tilt.js": "^1.1.1"
   },
   "devDependencies": {

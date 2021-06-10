@@ -38,6 +38,8 @@ export default {
   plugins: [
     // https://github.com/vanderb/vue-tilt.js
     '~/plugins/vue-tilt.client.js',
+    // https://github.com/BiYuqi/vue-intersection-observer
+    '~/plugins/vue-intersection-observer.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

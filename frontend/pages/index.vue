@@ -1,33 +1,37 @@
 <template>
   <div>
     <Head title="Niklas Buchfink - Designer & Engineer" description="I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development." />
-    <r-grid class="frontpageGrid section" columns="12" columns-s="8" columns-xs="4">
-      <r-cell class="headerContentCell" span="6" span-s="2+6" span-xs="1..">
-        <div class="frontpageHeaderItem">
-          <p class="name">Niklas Buchfink</p>
-          <h1>
-            Design &amp;<br />
-            Engineering
-          </h1>
-          <p class="frontpageText">
-            I’m a user experience designer and electrical engineer with
-            expertise in high fidelity prototyping and web development.
-          </p>
-          <div class="buttonWrapper">
-            <a href="mailto:hey@niklasbuchfink.com">
-              <ChatButton />
-            </a>
-          </div>
-        </div>
-      </r-cell>
-      <r-cell class="heroImageCell" span="6" span-s="3+4" order-s="-1" span-xs="2-4">
-        <div class="heroimageWrapper">
-          <HeroImage :heroimage="startpage.heroimage" />
-        </div>
+    <r-grid class="frontpageGrid" columns="12" columns-s="8" columns-xs="4">
+      <r-cell class="fullpage" span="1-12" span-s="1-8" span-xs="1-4">
+        <r-grid class="frontpageHeaderGrid" columns="12" columns-s="8" columns-xs="4">
+          <r-cell class="headerContentCell" span="6" span-s="2+6" span-xs="1..">
+            <div class="frontpageHeaderItem">
+              <p class="name">Niklas Buchfink</p>
+              <h1>
+                Design &amp;<br />
+                Engineering
+              </h1>
+              <p class="frontpageText">
+                I’m a user experience designer and electrical engineer with
+                expertise in high fidelity prototyping and web development.
+              </p>
+              <div class="buttonWrapper">
+                <a href="mailto:hey@niklasbuchfink.com">
+                  <ChatButton />
+                </a>
+              </div>
+            </div>
+          </r-cell>
+          <r-cell class="heroImageCell" span="6" span-s="3+4" order-s="-1" span-xs="2-4">
+            <div class="heroimageWrapper">
+              <HeroImage :heroimage="startpage.heroimage" />
+            </div>
+          </r-cell>
+        </r-grid>
       </r-cell>
       <r-cell
         span="12" span-s="2+6" span-xs="1+4"
-        class="cards section"
+        class="cards fullpage"
         v-for="project in projects"
         v-bind:key="'Project' + project.id"
       >
@@ -45,8 +49,7 @@ export default {
   data() {
     return {
       projects: [],
-      startpage: [],
-      options: {},
+      startpage: [],      
     }
   },
   apollo: {
