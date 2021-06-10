@@ -34,7 +34,7 @@ export default {
       transition: 0.3s;
     }
     li:hover {
-      opacity: 0.7;
+      opacity: 0.6;
     }
   }
 }

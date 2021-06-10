@@ -24,10 +24,12 @@
       </div> 
       <Nuxt class="slot" />
     </main>
-    <StartpageFooter class="fullpage" />
-    <observer @on-change="onChange" @threshold="0.9">
-      <Footer/>
-    </observer>
+    <div class="fullpage">
+      <StartpageFooter />
+      <observer @on-change="onChange" @threshold="0.9">
+        <Footer/>
+      </observer>
+    </div>
   </div>
 </template>
 
@@ -117,6 +119,7 @@ export default {
   align-items: flex-end;
   @media screen and (max-width: $max_width_s) {
     padding: 2rem;
+    height: auto;
   }
   &.isFooterBackground {
     color: $color-nearlywhite;
@@ -145,10 +148,10 @@ export default {
   }
 }
 .sections-menu .menu-point {
-  width: 1rem;
-  height: 1rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   background-color: $color-darkgray;
   display: block;
   opacity: .6;

@@ -30,6 +30,6 @@ export default {}
   }
 }
 .chatButton:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 </style>
