@@ -16,14 +16,17 @@ export function scrollToSection(id, force = false) {
   });
   setTimeout(() => {
       this.inMove = false;
-  }, 800);
+  }, 600);
 }
 
 export function handleMouseWheel(e) {
-  if (e.wheelDelta < 30 && !this.inMove) {
-      this.moveUp();
+  console.log(e.wheelDelta);
+  if (e.wheelDelta < -30 && !this.inMove) {
+    console.log('down');
+    this.moveUp();
   } else if (e.wheelDelta > 30 && !this.inMove) {
-      this.moveDown();
+    console.log('up');
+    this.moveDown();
   }
   e.preventDefault();
   return false;
