@@ -32,9 +32,6 @@ export default {
   display: flex;
   align-items: center;
   height: 100vh;
-  // @media screen and (max-width: $max_width_xs) {
-  //   align-items: flex-end;
-  // }
   .cardContainer {
     height: auto;
     .cardContentCell {

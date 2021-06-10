@@ -70,12 +70,12 @@ export default {
     window.addEventListener('mousewheel', this.handleMouseWheel, {
         passive: false
     }); // Other browsers
-    window.addEventListener('touchstart', this.touchStart, {
-        passive: false
-    }); // mobile devices
-    window.addEventListener('touchmove', this.touchMove, {
-        passive: false
-    }); // mobile devices
+    // window.addEventListener('touchstart', this.touchStart, {
+    //     passive: false
+    // }); // mobile devices
+    // window.addEventListener('touchmove', this.touchMove, {
+    //     passive: false
+    // }); // mobile devices
     this.navItem = document.getElementById('actions-right-js');
   },
   destroyed() {
@@ -83,8 +83,8 @@ export default {
         passive: false
     }); // Other browsers
     window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
-    window.removeEventListener('touchstart', this.touchStart); // mobile devices
-    window.removeEventListener('touchmove', this.touchMove); // mobile devices
+    // window.removeEventListener('touchstart', this.touchStart); // mobile devices
+    // window.removeEventListener('touchmove', this.touchMove); // mobile devices
   },
   components: {
     Observer
@@ -114,7 +114,6 @@ export default {
   top: 0;
   right: 0;
   z-index: 1001;
-  height: 100vh;
   padding: 2.125rem 3.375rem;
   align-items: flex-end;
   @media screen and (max-width: $max_width_s) {
@@ -142,7 +141,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   @media screen and (max-width: $max_width_s) {
     display: none;
   }
