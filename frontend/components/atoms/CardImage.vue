@@ -1,5 +1,5 @@
 <template>
-    <div class="cardImage" v-tilt="{scale: 1.05}">
+    <div class="cardImage" v-tilt>
       <div class="cardShape" :style="colorGradient">
         <span> {{letter}} </span>
         <img

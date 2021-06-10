@@ -137,6 +137,7 @@ export default {
   right: 3.375rem;
   top: 50%;
   transform: translateY(-50%);
+  width: 0.9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

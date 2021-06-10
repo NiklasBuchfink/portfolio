@@ -16,7 +16,7 @@ export function scrollToSection(id, force = false) {
   });
   setTimeout(() => {
       this.inMove = false;
-  }, 400);
+  }, 800);
 }
 
 export function handleMouseWheel(e) {
