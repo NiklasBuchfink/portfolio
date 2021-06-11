@@ -32,7 +32,7 @@
       <r-cell
         span="12" span-s="2+6" span-xs="1+4"
         class="cards fullpage"
-        v-for="project in projects"
+        v-for="project in orderBy(projects,'order')"
         v-bind:key="'Project' + project.id"
       >
         <div class="cardWrapper" v-if="project.startpage">
@@ -44,6 +44,7 @@
 </template>
 <script>
 import { projectQuery, startpageQuery } from '~/graphql/query'
+import Vue2Filters from 'vue2-filters'
 
 export default {
   data() {
@@ -62,6 +63,7 @@ export default {
       query: startpageQuery,
     },
   },
+  mixins: [Vue2Filters.mixin],
   layout: 'startpage',
 }
 </script>

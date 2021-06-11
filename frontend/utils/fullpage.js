@@ -20,12 +20,9 @@ export function scrollToSection(id, force = false) {
 }
 
 export function handleMouseWheel(e) {
-  console.log(e.wheelDelta);
   if (e.wheelDelta < -30 && !this.inMove) {
-    console.log('down');
     this.moveUp();
   } else if (e.wheelDelta > 30 && !this.inMove) {
-    console.log('up');
     this.moveDown();
   }
   e.preventDefault();

@@ -12,6 +12,7 @@ export const projectQuery = gql`
       subtitle
       categories {id, title}
       startpage
+      order
     }
   }
 `

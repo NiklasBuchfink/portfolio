@@ -40,6 +40,8 @@ export default {
     '~/plugins/vue-tilt.client.js',
     // https://github.com/BiYuqi/vue-intersection-observer
     '~/plugins/vue-intersection-observer.client.js',
+    // https://github.com/freearhey/vue2-filters
+    '~/plugins/vue2-filters.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

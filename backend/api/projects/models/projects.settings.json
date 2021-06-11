@@ -45,6 +45,10 @@
     },
     "link": {
       "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "unique": true
     }
   }
 }
