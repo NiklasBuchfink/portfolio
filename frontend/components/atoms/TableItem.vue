@@ -5,7 +5,7 @@
         <h4>{{title}}</h4>
       </r-cell>
       <r-cell class="tableLink" span="7-10" span-s="4-7" span-xs="1-4">
-        <a :href="linkadress" target="blank">
+        <a :href="linkadress" target="blank" rel="noopener" >
           <span>@{{linktext}}</span>
         </a>
       </r-cell>

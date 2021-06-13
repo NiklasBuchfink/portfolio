@@ -2,7 +2,7 @@
   <div class="card">
     <r-grid columns="12" columns-xs="4" class="cardContainer">
       <r-cell span="6" span-s="2+10" span-xs="1+4">
-        <a :href="project.link" target="blank">
+        <a :href="project.link" target="blank" rel="noopener">
           <CardImage
             :letter="project.letter"
             :image="project.image"
