@@ -20,11 +20,10 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Niklas Buchfink' },
-      { hid: 'description', name: 'description', content: 'I/’m a user experience designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
-      { name: 'robots', content: 'noindex'},
+      { hid: 'description', name: 'description', content: 'I/’m a interaction designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],
   },
 
