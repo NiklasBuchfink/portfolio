@@ -137,7 +137,7 @@
             <p>{{item.text}}</p>
           </r-cell>
           <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
-            <a :href="item.linkadress" target="blank" rel="noopener">
+            <a :href="item.linkadress" target="blank" rel="noopener noreferrer">
               <ImageTile :image="item.image"/>
             </a>
           </r-cell>
@@ -148,7 +148,7 @@
             <p>{{item.text}}</p>
           </r-cell>
           <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
-            <a :href="item.linkadress" target="blank" rel="noopener">
+            <a :href="item.linkadress" target="blank" rel="noopener noreferrer">
               <ImageTile :image="item.image"/>
             </a>
           </r-cell>
