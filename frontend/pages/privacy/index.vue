@@ -8,7 +8,7 @@
         </h1>
       </r-cell>
 
-      <r-cell class="privacyContent" span="6" span-s="2+6" span-xs="1-4">
+      <r-cell class="privacyContent" span="8" span-s="2+6" span-xs="1-4">
         <div 
           v-if="privacypage.content" 
           v-html="$md.render(privacypage.content)"
@@ -36,17 +36,31 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .privacyHeadline{
   margin-top: 8rem;
 }
 .privacyContent{
   margin-top: 4rem;
+  margin-bottom: 4rem;
   h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
   }
-  p{
+  h3 {
+    margin-top: 2rem;
+  }
+  p {
     @include paragraph-large;
+    margin-bottom: 2rem;
+  }
+  a {
+    @media screen and (max-width: $max_width_s) {
+      padding-bottom: 0.5rem;
+      text-decoration: underline;
+    }
+  }
+  a :hover{
+    text-decoration: underline;
   }
 }
 </style>
