@@ -2,7 +2,7 @@
   <div class>
     <r-grid class="tableGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="tableTitle" span="2-6" span-s="4-7" span-xs="1-4">
-        <h4>{{title}}</h4>
+        <p>{{title}}</p>
       </r-cell>
       <r-cell class="tableLink" span="7-10" span-s="4-7" span-xs="1-4">
         <a :href="linkadress" target="blank" rel="noopener" >
@@ -44,11 +44,10 @@ export default {
     text-decoration: underline;
   }
   .tableTitle {
-    h4 {
-      white-space: nowrap;
-      @media screen and (max-width: $max_width_xs) {
-        white-space: normal;
-      }
+    font-weight: 600;
+    white-space: nowrap;
+    @media screen and (max-width: $max_width_xs) {
+      white-space: normal;
     }
   }
   .tableLink { 
