@@ -54,12 +54,6 @@ export default {
     margin-bottom: 2rem;
   }
   a {
-    @media screen and (max-width: $max_width_s) {
-      padding-bottom: 0.5rem;
-      text-decoration: underline;
-    }
-  }
-  a :hover{
     text-decoration: underline;
   }
 }
