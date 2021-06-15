@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Head title="About" description="Hello, I/’m Niklas. Let me tell you a little bit about myself." />
+    <Head title="About" description="Hello, I’m Niklas. Let me tell you a little bit about myself." />
     <r-grid class="aboutGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="aboutTitleContent" span="6" span-s="2+6" span-xs="1-4">
         <h1>

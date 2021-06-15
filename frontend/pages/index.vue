@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Head title="Niklas Buchfink - Designer & Engineer" description="I/’m a interaction designer and electrical engineer with expertise in high fidelity prototyping and web development." />
+    <Head title="Niklas Buchfink - Designer & Engineer" description="I’m a interaction designer and electrical engineer with expertise in high fidelity prototyping and web development." />
     <r-grid class="frontpageGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="fullpage" span="1-12" span-s="1-8" span-xs="1-4">
         <r-grid class="frontpageHeaderGrid" columns="12" columns-s="8" columns-xs="4">
