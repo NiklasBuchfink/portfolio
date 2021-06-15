@@ -3,7 +3,6 @@ import { getStrapiMedia } from "~/utils/medias";
 export function backgroundStyles(image) {
   return {
     // any other styles you might need to add on as an example
-    'background-image': `url(${getStrapiMedia(image.formats.medium.url)})`,
-    'aria-label': `url(${getStrapiMedia(image.alternativeText)})`
+    'background-image': `url(${getStrapiMedia(image.formats.medium.url)})`
   }
 }

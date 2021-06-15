@@ -137,7 +137,12 @@
             <p>{{item.text}}</p>
           </r-cell>
           <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
-            <a :href="item.linkadress" target="blank" rel="noopener noreferrer">
+            <a 
+              :href="item.linkadress" 
+              target="blank" 
+              rel="noopener noreferrer"
+              :aria-label="getStrapiMedia(item.image.alternativeText)"
+            >
               <ImageTile :image="item.image"/>
             </a>
           </r-cell>
@@ -148,7 +153,12 @@
             <p>{{item.text}}</p>
           </r-cell>
           <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
-            <a :href="item.linkadress" target="blank" rel="noopener noreferrer">
+            <a 
+              :href="item.linkadress"
+              target="blank"
+              rel="noopener noreferrer"
+              :aria-label="getStrapiMedia(item.image.alternativeText)"
+            >
               <ImageTile :image="item.image"/>
             </a>
           </r-cell>
@@ -159,6 +169,7 @@
 </template>
 <script>
 import { aboutpageQuery } from '~/graphql/query'
+import { getStrapiMedia } from '~/utils/medias'
 
 export default {
   data() {
@@ -171,6 +182,9 @@ export default {
       prefetch: true,
       query: aboutpageQuery,
     },
+  },
+  methods: {
+    getStrapiMedia,
   },
 }
 </script>
