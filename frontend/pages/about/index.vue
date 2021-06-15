@@ -191,6 +191,7 @@ export default {
 
 <style lang="scss" scoped>
 h2 {
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 h3 {

@@ -53,12 +53,12 @@ export default {
   .tableLink { 
     color: $color-gray;   
     @media screen and (max-width: $max_width_s) {
-      padding-bottom: 0.5rem;
       text-decoration: underline;
     }
   }
   .tableText {
     p {
+      margin-top: 0.5rem;
       width: 95%;
       @media screen and (max-width: $max_width_s) {
         width: 100%;
