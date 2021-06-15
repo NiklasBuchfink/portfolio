@@ -65,6 +65,8 @@ export default {
     'nuxt-webfontloader',
     // https://github.com/nuxt-community/markdownit-module
     '@nuxtjs/markdownit',
+    // https://gitlab.com/broj42/nuxt-lazy-load
+    'nuxt-lazy-load'
   ],
 
   apollo: {

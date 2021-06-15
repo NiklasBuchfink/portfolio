@@ -4,8 +4,9 @@
         <span> {{letter}} </span>
         <img
           v-if="image != null"
-          :src="getStrapiMedia(image.formats.medium.url)"
+          :data-src="getStrapiMedia(image.formats.medium.url)"
           :alt="getStrapiMedia(image.alternativeText)"
+          v-lazy-load
         />
       </div>
     </div>
