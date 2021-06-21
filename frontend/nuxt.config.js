@@ -20,7 +20,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'author', content: 'Niklas Buchfink' },
-      { hid: 'description', name: 'description', content: 'I’m a interaction designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
+      { hid: 'description', name: 'description', content: 'I’m an interaction designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
       // Control the behavior of search engine crawling and indexing
       // All Search Engines
       { name: 'robots', content:'index,follow'},
