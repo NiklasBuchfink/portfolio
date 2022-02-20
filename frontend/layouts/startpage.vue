@@ -7,7 +7,7 @@
         </div>
         <div class="actions-right" id="actions-right-js">
           <Navigation
-            :link="/about"
+            :link="'/about'"
           >
             About
           </Navigation>
