@@ -7,7 +7,7 @@
         </div>
         <div class="actions-right">
           <Navigation
-            :link="'/'"
+            :link="/"
           >
             Projects
           </Navigation>
