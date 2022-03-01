@@ -198,7 +198,7 @@ h3 {
   margin-bottom: 1rem;
 }
 p {
-  width: clamp(45ch, 75ch);
+  //width: clamp(45ch, 75ch);
 }
 .aboutTitleContent{
   margin-top: 8rem;
