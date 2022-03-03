@@ -1,43 +1,51 @@
 <template>
-  <div id="app"> 
+  <div id="app">
     <main>
       <div class="actions">
         <div class="actions-left">
           <Logo />
         </div>
-        <div class="actions-right" id="actions-right-js">
-          <Navigation
-            :link="'/about'"
-          >
-            About
-          </Navigation>
-           <div class="sections-menu">
+        <div id="actions-right-js" class="actions-right">
+          <Navigation :link="'/about'"> About </Navigation>
+          <div class="sections-menu">
             <span
-              class="menu-point"
-              v-bind:class="{active: activeSection == index}"
-              v-on:click="scrollToSection(index)"
               v-for="(offset, index) in offsets"
-              v-bind:key="index">
+              :key="index"
+              class="menu-point"
+              :class="{ active: activeSection == index }"
+              @click="scrollToSection(index)"
+            >
             </span>
           </div>
         </div>
-      </div> 
+      </div>
       <Nuxt class="slot" />
     </main>
     <div class="fullpage">
       <StartpageFooter />
       <observer @on-change="onChange" @threshold="0.9">
-        <Footer/>
+        <Footer />
       </observer>
     </div>
   </div>
 </template>
 
 <script>
-import { calculateSectionOffsets, scrollToSection, handleMouseWheel, moveDown, moveUp, touchStart, touchMove } from "~/utils/fullpage"
 import Observer from 'vue-intersection-observer'
+import {
+  calculateSectionOffsets,
+  scrollToSection,
+  handleMouseWheel,
+  moveDown,
+  moveUp,
+  touchStart,
+  touchMove,
+} from '~/utils/fullpage'
 
 export default {
+  components: {
+    Observer,
+  },
   data() {
     return {
       inMove: false,
@@ -47,47 +55,44 @@ export default {
       navItem: null,
     }
   },
-  methods: {
-    calculateSectionOffsets, 
-    scrollToSection, 
-    handleMouseWheel: handleMouseWheel, 
-    moveDown, 
-    moveUp,
-    touchStart, 
-    touchMove,
-    onChange(entry, unobserve) {
-      // After loading Cancel monitoring, optimise performance
-      if (entry.isIntersecting) {
-        this.navItem.classList.add('isFooterBackground');
-      } else {
-        this.navItem.classList.remove('isFooterBackground'); 
-      }
-    },
-  },
   mounted() {
-    this.calculateSectionOffsets();
-    window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
+    this.calculateSectionOffsets()
+    window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM) // Mozilla Firefox
     window.addEventListener('mousewheel', this.handleMouseWheel, {
-        passive: false
-    }); // Other browsers
+      passive: false,
+    }) // Other browsers
     // window.addEventListener('touchstart', this.touchStart, {
     //     passive: false
     // }); // mobile devices
     // window.addEventListener('touchmove', this.touchMove, {
     //     passive: false
     // }); // mobile devices
-    this.navItem = document.getElementById('actions-right-js');
+    this.navItem = document.getElementById('actions-right-js')
   },
   destroyed() {
     window.removeEventListener('mousewheel', this.handleMouseWheel, {
-        passive: false
-    }); // Other browsers
-    window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
+      passive: false,
+    }) // Other browsers
+    window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM) // Mozilla Firefox
     // window.removeEventListener('touchstart', this.touchStart); // mobile devices
     // window.removeEventListener('touchmove', this.touchMove); // mobile devices
   },
-  components: {
-    Observer
+  methods: {
+    calculateSectionOffsets,
+    scrollToSection,
+    handleMouseWheel,
+    moveDown,
+    moveUp,
+    touchStart,
+    touchMove,
+    onChange(entry, unobserve) {
+      // After loading Cancel monitoring, optimise performance
+      if (entry.isIntersecting) {
+        this.navItem.classList.add('isFooterBackground')
+      } else {
+        this.navItem.classList.remove('isFooterBackground')
+      }
+    },
   },
 }
 </script>
@@ -153,8 +158,8 @@ export default {
   margin: 0.5rem 0;
   background-color: $color-darkgray;
   display: block;
-  opacity: .6;
-  transition: .4s ease all;
+  opacity: 0.6;
+  transition: 0.4s ease all;
   cursor: pointer;
 }
 .sections-menu .menu-point.active {

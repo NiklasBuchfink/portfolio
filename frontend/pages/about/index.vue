@@ -1,87 +1,73 @@
 <template>
   <div>
-    <Head title="About" description="Hello, I’m Niklas. Let me tell you a little bit about myself." />
+    <Head
+      title="About"
+      description="Hello, I’m Niklas. Let me tell you a little bit about myself."
+    />
     <r-grid class="aboutGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="aboutTitleContent" span="6" span-s="2+6" span-xs="1-4">
-        <h1>
-          Who I am
-        </h1>
+        <h1>Who I am</h1>
         <p>
-          {{aboutpage.headerparagraph}} 
+          {{ aboutpage.headerparagraph }}
         </p>
       </r-cell>
       <r-cell class="aboutTitleImage" span="8-12" span-s="2+6" span-xs="1-4">
-        <ImageTile :image="aboutpage.headerimage"/>
+        <ImageTile :image="aboutpage.headerimage" />
       </r-cell>
       <r-cell class="aboutHowIWorkTitle" span="12" span-s="2+6" span-xs="1-4">
-        <h2>
-          How I Work
-        </h2>
+        <h2>How I Work</h2>
       </r-cell>
-      <r-cell class="aboutHowIWorkContent" span="4" span-s="2+5" span-xs="1-3"
-        v-for="item in aboutpage.HowIWork" 
+      <r-cell
+        v-for="item in aboutpage.HowIWork"
         :key="'HomIWork' + item.id"
+        class="aboutHowIWorkContent"
+        span="4"
+        span-s="2+5"
+        span-xs="1-3"
       >
-        <HowIWork
-          :subtitle="item.subtitle"
-          :text="item.text" 
-        />
+        <HowIWork :subtitle="item.subtitle" :text="item.text" />
       </r-cell>
       <r-cell class="aboutTools" span="2+4" span-s="2-4" span-xs="1-4">
-         <h3>
-          My Design Tools
-        </h3>
+        <h3>My Design Tools</h3>
         <div>
-          <span 
+          <span
             v-for="(item, index) in aboutpage.DesignTools"
             :key="'DesignTools' + item.id"
           >
-            <span
-              v-if="index == aboutpage.DesignTools.length - 1"
-            >
-              {{item.name}}
+            <span v-if="index == aboutpage.DesignTools.length - 1">
+              {{ item.name }}
             </span>
-            <span
-              v-else
-            >
-              {{item.name}} /
-            </span>
+            <span v-else> {{ item.name }} / </span>
           </span>
         </div>
       </r-cell>
       <r-cell class="aboutTools" span="8+4" span-s="5-7" span-xs="1-4">
-        <h3>
-          My Programming Tools
-        </h3>
+        <h3>My Programming Tools</h3>
         <div>
-          <span 
+          <span
             v-for="(item, index) in aboutpage.ProgrammingTools"
             :key="'ProgrammingTools' + item.id"
           >
-            <span
-              v-if="index == aboutpage.ProgrammingTools.length - 1"
-            >
-              {{item.name}}
+            <span v-if="index == aboutpage.ProgrammingTools.length - 1">
+              {{ item.name }}
             </span>
-            <span
-              v-else
-            >
-              {{item.name}} /
-            </span>
+            <span v-else> {{ item.name }} / </span>
           </span>
         </div>
       </r-cell>
       <r-cell class="aboutWorkTitle" span="12" span-s="2+6" span-xs="1-4">
-        <h2>
-          Work Experience
-        </h2>
+        <h2>Work Experience</h2>
       </r-cell>
-      <r-cell class="aboutWorkExperienceContent" span="12" span-s="8" span-xs="4"
-        v-for="item in aboutpage.WorkExperience" 
+      <r-cell
+        v-for="item in aboutpage.WorkExperience"
         :key="'WorkExperience' + item.id"
+        class="aboutWorkExperienceContent"
+        span="12"
+        span-s="8"
+        span-xs="4"
       >
-        <TableItem 
-          :title="item.title" 
+        <TableItem
+          :title="item.title"
           :text="item.text"
           :linktext="item.linktext"
           :linkadress="item.linkadress"
@@ -89,33 +75,42 @@
         />
       </r-cell>
       <r-cell class="aboutEducationTitle" span="12" span-s="2+6" span-xs="1-4">
-        <h2>
-          Education
-        </h2>
+        <h2>Education</h2>
       </r-cell>
-      <r-cell class="aboutEducationContent" span="12" span-s="8" span-xs="4"
-        v-for="item in aboutpage.Education" 
+      <r-cell
+        v-for="item in aboutpage.Education"
         :key="'Education' + item.id"
+        class="aboutEducationContent"
+        span="12"
+        span-s="8"
+        span-xs="4"
       >
-        <TableItem 
-          :title="item.title" 
+        <TableItem
+          :title="item.title"
           :text="item.text"
           :linktext="item.linktext"
           :linkadress="item.linkadress"
           :date="item.date"
         />
       </r-cell>
-      <r-cell class="aboutVolunteeringTitle" span="12" span-s="2+6" span-xs="1-4">
-        <h2>
-          Volunteering
-        </h2>
+      <r-cell
+        class="aboutVolunteeringTitle"
+        span="12"
+        span-s="2+6"
+        span-xs="1-4"
+      >
+        <h2>Volunteering</h2>
       </r-cell>
-      <r-cell class="aboutVolunteeringContent" span="12" span-s="8" span-xs="4"
+      <r-cell
         v-for="item in aboutpage.Volunteering"
         :key="'Volunteering' + item.id"
+        class="aboutVolunteeringContent"
+        span="12"
+        span-s="8"
+        span-xs="4"
       >
-        <TableItem 
-          :title="item.title" 
+        <TableItem
+          :title="item.title"
           :text="item.text"
           :linktext="item.linktext"
           :linkadress="item.linkadress"
@@ -123,43 +118,57 @@
         />
       </r-cell>
       <r-cell class="aboutFreeTimeTitle" span="12" span-s="2+6" span-xs="1-4">
-        <h2>
-          Free Time
-        </h2>
+        <h2>Free Time</h2>
       </r-cell>
-      <r-cell class="aboutFreeTimeContent" span="12" span-s="8" span-xs="4"
+      <r-cell
         v-for="item in aboutpage.FreeTime"
         :key="'FreeTime' + item.id"
+        class="aboutFreeTimeContent"
+        span="12"
+        span-s="8"
+        span-xs="4"
       >
-        <r-grid v-if="item.order==1" class="freeTimeGrid" columns="12" columns-s="8" columns-xs="4">
+        <r-grid
+          v-if="item.order == 1"
+          class="freeTimeGrid"
+          columns="12"
+          columns-s="8"
+          columns-xs="4"
+        >
           <r-cell class="freeTimeContent" span="1-4" span-s="2+6" span-xs="1-4">
-            <h3>{{item.title}}</h3>
-            <p>{{item.text}}</p>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
           </r-cell>
           <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
-            <a 
-              :href="item.linkadress" 
-              target="blank" 
-              rel="noopener noreferrer"
-              :aria-label="getStrapiMedia(item.image.alternativeText)"
-            >
-              <ImageTile :image="item.image"/>
-            </a>
-          </r-cell>
-        </r-grid>
-        <r-grid v-if="item.order==2" class="freeTimeGrid" columns="12" columns-s="8" columns-xs="4">
-          <r-cell class="freeTimeContent" span="3-6" span-s="2+6" span-xs="1-4">
-            <h3>{{item.title}}</h3>
-            <p>{{item.text}}</p>
-          </r-cell>
-          <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
-            <a 
+            <a
               :href="item.linkadress"
               target="blank"
               rel="noopener noreferrer"
               :aria-label="getStrapiMedia(item.image.alternativeText)"
             >
-              <ImageTile :image="item.image"/>
+              <ImageTile :image="item.image" />
+            </a>
+          </r-cell>
+        </r-grid>
+        <r-grid
+          v-if="item.order == 2"
+          class="freeTimeGrid"
+          columns="12"
+          columns-s="8"
+          columns-xs="4"
+        >
+          <r-cell class="freeTimeContent" span="3-6" span-s="2+6" span-xs="1-4">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </r-cell>
+          <r-cell class="freeTimeImage" span="6" span-s="2+6" span-xs="1-4">
+            <a
+              :href="item.linkadress"
+              target="blank"
+              rel="noopener noreferrer"
+              :aria-label="getStrapiMedia(item.image.alternativeText)"
+            >
+              <ImageTile :image="item.image" />
             </a>
           </r-cell>
         </r-grid>
@@ -200,7 +209,7 @@ h3 {
 p {
   //width: clamp(45ch, 75ch);
 }
-.aboutTitleContent{
+.aboutTitleContent {
   margin-top: 8rem;
   @media screen and (max-width: $max_width_s) {
     margin-bottom: 0rem;
@@ -208,11 +217,11 @@ p {
   h1 {
     margin-bottom: 2rem;
   }
-  p{
+  p {
     @include paragraph-large;
   }
 }
-.aboutTitleImage{
+.aboutTitleImage {
   margin-top: 8rem;
   width: 100%;
   max-height: 20rem;
@@ -226,7 +235,7 @@ p {
     height: 60vw;
   }
 }
-.aboutTools{
+.aboutTools {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,18 +246,18 @@ p {
   h3 {
     text-align: center;
   }
-  div{
+  div {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     @media screen and (max-width: $max_width_xs) {
-     width: 60vw;
+      width: 60vw;
     }
     span {
       @include paragraph-large;
       color: $color-gray;
-      white-space:nowrap;
+      white-space: nowrap;
       padding-right: 0.15rem;
       height: $line-height-h3;
     }
@@ -263,7 +272,7 @@ p {
 .aboutFreeTimeTitle {
   margin-top: 2rem;
 }
-.freeTimeGrid{
+.freeTimeGrid {
   margin-bottom: 4rem;
   p {
     width: 90%;

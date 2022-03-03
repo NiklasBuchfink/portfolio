@@ -3,8 +3,9 @@
     <div class="tile">
       <span>N</span>
       <div class="mask">
-        <img class="heroImage"
+        <img
           v-if="heroimage != null"
+          class="heroImage"
           :src="getStrapiMedia(heroimage.formats.medium.url)"
           :alt="getStrapiMedia(heroimage.alternativeText)"
         />
@@ -14,15 +15,12 @@
 </template>
 
 <script>
-import { getStrapiMedia } from "~/utils/medias";
+import { getStrapiMedia } from '~/utils/medias'
 
 export default {
- props:
-  [
-    'heroimage',
-  ],
+  props: ['heroimage'],
   methods: {
-    getStrapiMedia
+    getStrapiMedia,
   },
 }
 </script>
@@ -34,7 +32,7 @@ export default {
   width: 100%;
   height: 100%;
   @media screen and (max-width: $max_width_s) {
-    left:3rem;
+    left: 3rem;
   }
   @media screen and (max-width: $max_width_xs) {
     width: 70%;
@@ -50,7 +48,11 @@ export default {
     position: relative;
     display: flex;
     @include shadow-card;
-    background: linear-gradient(135deg, rgba($rgb-darkgray, 0.8) 0%, $color-darkgray 100%);
+    background: linear-gradient(
+      135deg,
+      rgba($rgb-darkgray, 0.8) 0%,
+      $color-darkgray 100%
+    );
     border-radius: 2rem;
     width: 100%;
     height: 100%;

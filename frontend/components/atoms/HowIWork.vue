@@ -1,21 +1,17 @@
 <template>
   <div>
     <h3>
-      {{subtitle}}
+      {{ subtitle }}
     </h3>
     <p>
-      {{text}}
+      {{ text }}
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  props:
-    [
-      'subtitle',
-      'text',
-    ],
+  props: ['subtitle', 'text'],
 }
 </script>
 

@@ -1,5 +1,4 @@
-
-const strapiBaseUri = process.env.BACKEND_BASE_URL || "http://localhost:1337";
+const strapiBaseUri = process.env.BACKEND_BASE_URL || `http://localhost:1337`
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -13,34 +12,59 @@ export default {
     title: 'Niklas Buchfink - Designer & Engineer',
     htmlAttrs: {
       lang: 'en',
-      amp: true
+      amp: true,
     },
-    
+
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'author', content: 'Niklas Buchfink' },
-      { hid: 'description', name: 'description', content: 'I’m an interaction designer and electrical engineer with expertise in high fidelity prototyping and web development.' },
+      {
+        charset: 'utf-8',
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1',
+      },
+      {
+        name: 'author',
+        content: 'Niklas Buchfink',
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `I am an interaction designer and electrical engineer with expertise in high fidelity prototyping and web development.`,
+      },
       // Control the behavior of search engine crawling and indexing
       // All Search Engines
-      { name: 'robots', content:'index,follow'},
+      {
+        name: 'robots',
+        content: 'index,follow',
+      },
       // Google Specific
-      { name: 'googlebot', content:'index,follow'},
+      {
+        name: 'googlebot',
+        content: 'index,follow',
+      },
       // Tells Google not to show the sitelinks search box
-      { name: 'google', content:'nositelinkssearchbox'},
+      {
+        name: 'google',
+        content: 'nositelinkssearchbox',
+      },
       // Tells Google not to provide a translation for this document
-      { name: 'google', content:'notranslate'},
+      {
+        name: 'google',
+        content: 'notranslate',
+      },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.png',
+      },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/css/raster2.css',
-    '~/assets/scss/main.scss',
-  ],
+  css: ['~/assets/css/raster2.css', '~/assets/scss/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -75,14 +99,14 @@ export default {
     // https://github.com/nuxt-community/markdownit-module
     '@nuxtjs/markdownit',
     // https://gitlab.com/broj42/nuxt-lazy-load
-    'nuxt-lazy-load'
+    'nuxt-lazy-load',
   ],
 
   apollo: {
     clientConfigs: {
       default: {
         httpEndpoint:
-          process.env.BACKEND_URL || 'http://localhost:1337/graphql',
+          process.env.BACKEND_URL || `http://localhost:1337/graphql`,
       },
     },
   },
@@ -91,7 +115,7 @@ export default {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true
+    injected: true,
   },
 
   styleResources: {
@@ -113,10 +137,10 @@ export default {
   vue: {
     config: {
       ignoredElements: ['r-grid', 'r-cell'],
-    }
+    },
   },
 
   static: {
-    prefix: false
-  }
+    prefix: false,
+  },
 }
