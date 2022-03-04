@@ -21,16 +21,9 @@
 import { legalpageQuery } from '~/graphql/query'
 
 export default {
-  data() {
-    return {
-      legalpage: [],
-    }
-  },
-  apollo: {
-    legalpage: {
-      prefetch: true,
-      query: legalpageQuery,
-    },
+  async asyncData({ $graphql }) {
+    const { legalpage } = await $graphql.default.request(legalpageQuery)
+    return { legalpage }
   },
 }
 </script>

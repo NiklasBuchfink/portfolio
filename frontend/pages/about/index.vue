@@ -181,16 +181,9 @@ import { aboutpageQuery } from '~/graphql/query'
 import { getStrapiMedia } from '~/utils/medias'
 
 export default {
-  data() {
-    return {
-      aboutpage: [],
-    }
-  },
-  apollo: {
-    aboutpage: {
-      prefetch: true,
-      query: aboutpageQuery,
-    },
+  async asyncData({ $graphql }) {
+    const { aboutpage } = await $graphql.default.request(aboutpageQuery)
+    return { aboutpage }
   },
   methods: {
     getStrapiMedia,

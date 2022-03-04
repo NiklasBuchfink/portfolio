@@ -22,16 +22,9 @@
 import { privacypageQuery } from '~/graphql/query'
 
 export default {
-  data() {
-    return {
-      privacypage: [],
-    }
-  },
-  apollo: {
-    privacypage: {
-      prefetch: true,
-      query: privacypageQuery,
-    },
+  async asyncData({ $graphql }) {
+    const { privacypage } = await $graphql.default.request(privacypageQuery)
+    return { privacypage }
   },
 }
 </script>

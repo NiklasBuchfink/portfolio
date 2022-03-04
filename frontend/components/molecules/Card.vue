@@ -29,7 +29,12 @@
 
 <script>
 export default {
-  props: ['project'],
+  props: {
+    project: {
+      type: Object,
+      default: null,
+    },
+  },
 }
 </script>
 

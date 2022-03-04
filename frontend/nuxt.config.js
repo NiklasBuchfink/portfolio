@@ -86,6 +86,8 @@ export default {
   buildModules: [
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
+    // https://github.com/Gomah/nuxt-graphql-request
+    'nuxt-graphql-request',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -107,6 +109,15 @@ export default {
       default: {
         httpEndpoint:
           process.env.BACKEND_URL || `http://localhost:1337/graphql`,
+      },
+    },
+  },
+
+  graphql: {
+    clients: {
+      default: {
+        endpoint: process.env.BACKEND_URL || `http://localhost:1337/graphql`,
+        options: {},
       },
     },
   },

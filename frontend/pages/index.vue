@@ -65,21 +65,10 @@ import { projectQuery, startpageQuery } from '~/graphql/query'
 export default {
   mixins: [Vue2Filters.mixin],
   layout: 'startpage',
-  data() {
-    return {
-      projects: [],
-      startpage: [],
-    }
-  },
-  apollo: {
-    projects: {
-      prefetch: true,
-      query: projectQuery,
-    },
-    startpage: {
-      prefetch: true,
-      query: startpageQuery,
-    },
+  async asyncData({ $graphql }) {
+    const { projects } = await $graphql.default.request(projectQuery)
+    const { startpage } = await $graphql.default.request(startpageQuery)
+    return { projects, startpage }
   },
 }
 </script>

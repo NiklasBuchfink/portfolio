@@ -18,7 +18,12 @@
 import { getStrapiMedia } from '~/utils/medias'
 
 export default {
-  props: ['heroimage'],
+  props: {
+    heroimage: {
+      type: Object,
+      default: null,
+    },
+  },
   methods: {
     getStrapiMedia,
   },
