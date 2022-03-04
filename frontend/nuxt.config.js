@@ -94,8 +94,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
-    // https://github.com/nuxt-community/apollo-module
-    '@nuxtjs/apollo',
     // https://github.com/Developmint/nuxt-webfontloader
     'nuxt-webfontloader',
     // https://github.com/nuxt-community/markdownit-module
@@ -103,15 +101,6 @@ export default {
     // https://gitlab.com/broj42/nuxt-lazy-load
     'nuxt-lazy-load',
   ],
-
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint:
-          process.env.BACKEND_URL || `http://localhost:1337/graphql`,
-      },
-    },
-  },
 
   graphql: {
     clients: {
