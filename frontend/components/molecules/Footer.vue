@@ -2,8 +2,20 @@
   <div class="footer">
     <div class="copyright">2021 © Niklas Buchfink</div>
     <div class="socialmediaLinks">
-      <a href="https://www.linkedin.com/in/niklas-buchfink/"  target="blank" rel="noopener noreferrer" class="linkedIn">LinkedIn</a>
-      <a href="https://twitter.com/NBuchfink"  target="blank" rel="noopener noreferrer" class="twitter">Twitter</a>
+      <a
+        href="https://www.linkedin.com/in/niklas-buchfink/"
+        target="blank"
+        rel="noopener noreferrer"
+        class="linkedIn"
+        >LinkedIn</a
+      >
+      <a
+        href="https://twitter.com/NBuchfink"
+        target="blank"
+        rel="noopener noreferrer"
+        class="twitter"
+        >Twitter</a
+      >
     </div>
     <div class="lawLinks">
       <NuxtLink to="/legal" class="legal">Legal</NuxtLink>
@@ -15,7 +27,7 @@
 export default {}
 </script>
 <style lang="scss" scoped>
-.footer{
+.footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,7 +74,7 @@ export default {}
     @media screen and (max-width: $max_width_xs) {
       order: 2;
     }
-    .legal {        
+    .legal {
       margin-right: 2rem;
       @media screen and (max-width: $max_width_xs) {
         margin-right: 1rem;

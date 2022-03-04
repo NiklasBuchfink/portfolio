@@ -11,9 +11,7 @@
   </div>
 </template>
 <script>
-export default {
-
-}
+export default {}
 </script>
 <style lang="scss" scoped>
 .startpageFooter {
@@ -80,17 +78,17 @@ export default {
         }
       }
       span {
-      @include highlight-text;
-      font-weight: $font-weight-thin;
-      @media screen and (max-width: $max_width_s) {
-        font-size: 3rem;
-      }
-      @media screen and (max-width: $max_width_xs) {
-        font-size: 2.5rem;
-      }
-      @media screen and (max-width: $max_width_xxs) {
-        font-size: 2rem;
-      }
+        @include highlight-text;
+        font-weight: $font-weight-thin;
+        @media screen and (max-width: $max_width_s) {
+          font-size: 3rem;
+        }
+        @media screen and (max-width: $max_width_xs) {
+          font-size: 2.5rem;
+        }
+        @media screen and (max-width: $max_width_xxs) {
+          font-size: 2rem;
+        }
         u {
           text-decoration: none;
           border-bottom: 0.125rem solid $color-nearlywhite;

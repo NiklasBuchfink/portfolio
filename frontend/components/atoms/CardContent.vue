@@ -1,15 +1,16 @@
 <template>
   <div class="cardContent">
     <div class="title">
-      {{title}}
+      {{ title }}
     </div>
     <div class="subtitle">
-      {{subtitle}}
+      {{ subtitle }}
     </div>
     <div class="categories">
-      <div class="categorie"
+      <div
         v-for="categorie in categories"
-        v-bind:key="categorie.id"
+        :key="categorie.id"
+        class="categorie"
       >
         <CategorieBadge :categorie="categorie.title" />
       </div>
@@ -19,12 +20,7 @@
 
 <script>
 export default {
-  props:
-  [
-    'title',
-    'subtitle',
-    'categories'
-  ]
+  props: ['title', 'subtitle', 'categories'],
 }
 </script>
 

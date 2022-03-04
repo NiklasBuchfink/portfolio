@@ -1,14 +1,11 @@
 <template>
   <div class="categorieBadge">
-    {{categorie}}
+    {{ categorie }}
   </div>
 </template>
 <script>
 export default {
-    props:
-  [
-    'categorie',
-  ]
+  props: ['categorie'],
 }
 </script>
 <style lang="scss" scoped>

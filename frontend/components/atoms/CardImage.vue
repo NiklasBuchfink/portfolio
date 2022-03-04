@@ -1,37 +1,32 @@
 <template>
-    <div class="cardImage" v-tilt>
-      <div class="cardShape" :style="colorGradient">
-        <span> {{letter}} </span>
-        <img
-          v-if="image != null"
-          :data-src="getStrapiMedia(image.formats.medium.url)"
-          :alt="getStrapiMedia(image.alternativeText)"
-          v-lazy-load
-        />
-      </div>
+  <div v-tilt class="cardImage">
+    <div class="cardShape" :style="colorGradient">
+      <span> {{ letter }} </span>
+      <img
+        v-if="image != null"
+        v-lazy-load
+        :data-src="getStrapiMedia(image.formats.medium.url)"
+        :alt="getStrapiMedia(image.alternativeText)"
+      />
     </div>
+  </div>
 </template>
 
 <script>
-import { getStrapiMedia, hexRgb } from "~/utils/medias";
+import { getStrapiMedia, hexRgb } from '~/utils/medias'
 
 export default {
-  props:
-  [
-    'letter',
-    'image',
-    'color'
-  ],
-  methods: {
-    getStrapiMedia,
-  },
+  props: ['letter', 'image', 'color'],
   computed: {
-    colorGradient () {
+    colorGradient() {
       return {
         '--project-color': hexRgb(this.color),
       }
-    }
-  }
+    },
+  },
+  methods: {
+    getStrapiMedia,
+  },
 }
 </script>
 
@@ -52,7 +47,11 @@ export default {
     position: relative;
     display: flex;
     @include shadow-card;
-    background: linear-gradient(135deg, rgba(var(--project-color), 0.8) 0%, rgb(var(--project-color)) 100%);
+    background: linear-gradient(
+      135deg,
+      rgba(var(--project-color), 0.8) 0%,
+      rgb(var(--project-color)) 100%
+    );
     border-radius: 2rem;
     max-width: 34.5rem;
     padding-bottom: 100%;

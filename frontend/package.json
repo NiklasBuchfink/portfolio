@@ -11,13 +11,13 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
-    "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/emotion": "^0.1.0",
     "@nuxtjs/markdownit": "^2.0.0",
     "core-js": "^3.9.1",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
     "nuxt": "^2.15.3",
+    "nuxt-graphql-request": "^4.3.0",
     "nuxt-lazy-load": "^1.2.6",
     "vue-intersection-observer": "^0.1.7",
     "vue-tilt.js": "^1.1.1",

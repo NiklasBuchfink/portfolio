@@ -10,7 +10,13 @@
           />
         </a>
       </r-cell>
-      <r-cell span="8+5" span-s="2+10" order="+1" span-xs="1+4"  class="cardContentCell">
+      <r-cell
+        span="8+5"
+        span-s="2+10"
+        order="+1"
+        span-xs="1+4"
+        class="cardContentCell"
+      >
         <CardContent
           :title="project.title"
           :subtitle="project.subtitle"
@@ -23,7 +29,12 @@
 
 <script>
 export default {
-  props: ['project'],
+  props: {
+    project: {
+      type: Object,
+      default: null,
+    },
+  },
 }
 </script>
 

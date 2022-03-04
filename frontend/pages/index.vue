@@ -1,9 +1,17 @@
 <template>
   <div>
-    <Head title="Niklas Buchfink - Designer & Engineer" description="I’m an interaction designer and electrical engineer with expertise in high fidelity prototyping and web development." />
+    <Head
+      title="Niklas Buchfink - Designer & Engineer"
+      description="I’m an interaction designer and electrical engineer with expertise in high fidelity prototyping and web development."
+    />
     <r-grid class="frontpageGrid" columns="12" columns-s="8" columns-xs="4">
       <r-cell class="fullpage" span="1-12" span-s="1-8" span-xs="1-4">
-        <r-grid class="frontpageHeaderGrid" columns="12" columns-s="8" columns-xs="4">
+        <r-grid
+          class="frontpageHeaderGrid"
+          columns="12"
+          columns-s="8"
+          columns-xs="4"
+        >
           <r-cell class="headerContentCell" span="6" span-s="2+6" span-xs="1..">
             <div class="frontpageHeaderItem">
               <p class="name">Niklas Buchfink</p>
@@ -22,7 +30,13 @@
               </div>
             </div>
           </r-cell>
-          <r-cell class="heroImageCell" span="6" span-s="3+4" order-s="-1" span-xs="2-4">
+          <r-cell
+            class="heroImageCell"
+            span="6"
+            span-s="3+4"
+            order-s="-1"
+            span-xs="2-4"
+          >
             <div class="heroimageWrapper">
               <HeroImage :heroimage="startpage.heroimage" />
             </div>
@@ -30,12 +44,14 @@
         </r-grid>
       </r-cell>
       <r-cell
-        span="12" span-s="2+6" span-xs="1+4"
+        v-for="project in orderBy(projects, 'order')"
+        :key="'Project' + project.id"
+        span="12"
+        span-s="2+6"
+        span-xs="1+4"
         class="cards fullpage"
-        v-for="project in orderBy(projects,'order')"
-        v-bind:key="'Project' + project.id"
       >
-        <div class="cardWrapper" v-if="project.startpage">
+        <div v-if="project.startpage" class="cardWrapper">
           <Card :project="project" />
         </div>
       </r-cell>
@@ -43,28 +59,17 @@
   </div>
 </template>
 <script>
-import { projectQuery, startpageQuery } from '~/graphql/query'
 import Vue2Filters from 'vue2-filters'
+import { projectQuery, startpageQuery } from '~/graphql/query'
 
 export default {
-  data() {
-    return {
-      projects: [],
-      startpage: [],      
-    }
-  },
-  apollo: {
-    projects: {
-      prefetch: true,
-      query: projectQuery,
-    },
-    startpage: {
-      prefetch: true,
-      query: startpageQuery,
-    },
-  },
   mixins: [Vue2Filters.mixin],
   layout: 'startpage',
+  async asyncData({ $graphql }) {
+    const { projects } = await $graphql.default.request(projectQuery)
+    const { startpage } = await $graphql.default.request(startpageQuery)
+    return { projects, startpage }
+  },
 }
 </script>
 

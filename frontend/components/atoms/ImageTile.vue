@@ -1,18 +1,15 @@
 <template>
-  <div class="imageTileContainer"
+  <div
     v-if="image != null"
+    class="imageTileContainer"
     :style="backgroundImage(image)"
-  >
-  </div>
+  ></div>
 </template>
 <script>
-import { backgroundImage } from "~/utils/medias";
+import { backgroundImage } from '~/utils/medias'
 
 export default {
-  props:
-  [
-    'image',
-  ],
+  props: ['image'],
   methods: {
     backgroundImage,
   },

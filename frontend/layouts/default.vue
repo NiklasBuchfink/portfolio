@@ -6,16 +6,12 @@
           <Logo />
         </div>
         <div class="actions-right">
-          <Navigation
-            :link="'/'"
-          >
-            Projects
-          </Navigation>
+          <Navigation :link="'/'"> Projects </Navigation>
         </div>
       </div>
       <Nuxt class="slot" />
     </main>
-    <Footer class="smallFooter"/>
+    <Footer class="smallFooter" />
   </div>
 </template>
 
@@ -64,5 +60,4 @@ main {
     width: calc(100vw - 4rem);
   }
 }
-
 </style>
