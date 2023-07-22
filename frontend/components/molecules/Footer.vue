@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <div class="copyright">2021 © Niklas Buchfink</div>
+    <div class="copyright">2023 © Niklas Buchfink</div>
     <div class="socialmediaLinks">
       <a
         href="https://www.linkedin.com/in/niklasbuchfink/"

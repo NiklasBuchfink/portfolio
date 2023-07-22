@@ -6,8 +6,8 @@
         <img
           v-if="heroimage != null"
           class="heroImage"
-          :src="getStrapiMedia(heroimage.formats.medium.url)"
-          :alt="getStrapiMedia(heroimage.alternativeText)"
+          :src="heroimage.url"
+          :alt="heroimage.alternativeText"
         />
       </div>
     </div>
@@ -15,17 +15,12 @@
 </template>
 
 <script>
-import { getStrapiMedia } from '~/utils/medias'
-
 export default {
   props: {
     heroimage: {
       type: Object,
       default: null,
     },
-  },
-  methods: {
-    getStrapiMedia,
   },
 }
 </script>

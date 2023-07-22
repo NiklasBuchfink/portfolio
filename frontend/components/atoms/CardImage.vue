@@ -5,15 +5,15 @@
       <img
         v-if="image != null"
         v-lazy-load
-        :data-src="getStrapiMedia(image.formats.medium.url)"
-        :alt="getStrapiMedia(image.alternativeText)"
+        :data-src="image.url"
+        :alt="image.alternativeText"
       />
     </div>
   </div>
 </template>
 
 <script>
-import { getStrapiMedia, hexRgb } from '~/utils/medias'
+import { hexRgb } from '~/utils/medias'
 
 export default {
   props: ['letter', 'image', 'color'],
@@ -23,9 +23,6 @@ export default {
         '--project-color': hexRgb(this.color),
       }
     },
-  },
-  methods: {
-    getStrapiMedia,
   },
 }
 </script>

@@ -1,5 +1,0 @@
-deploy:
-  stage: deploy
-  script:
-  - gem install dpl
-  - dpl --provider=heroku --niklasbuchfink  --api-key=$HEROKU_API_KEY

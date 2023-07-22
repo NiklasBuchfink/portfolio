@@ -1,18 +1,8 @@
-export function getStrapiMedia(url) {
-  // Check if URL is a local path
-  if (url.startsWith('/')) {
-    // Prepend Strapi address
-    return `${process.env.strapiBaseUri}${url}`
-  }
-  // Otherwise return full URL
-  return url
-}
-
 export function backgroundImage(image) {
   return {
     // any other styles you might need to add on as an example
-    'background-image': `url(${getStrapiMedia(image.formats.medium.url)})`,
-    'aria-label': getStrapiMedia(image.alternativeText),
+    'background-image': `url(${image.url}`,
+    'aria-label': image.alternativeText,
   }
 }
 

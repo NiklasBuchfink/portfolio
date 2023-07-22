@@ -24,14 +24,14 @@
     <div class="fullpage">
       <StartpageFooter />
       <observer @on-change="onChange" @threshold="0.9">
-        <Footer />
+        <Startpage />
       </observer>
     </div>
   </div>
 </template>
 
 <script>
-import Observer from 'vue-intersection-observer'
+import observer from 'vue-intersection-observer'
 import {
   calculateSectionOffsets,
   scrollToSection,
@@ -44,7 +44,7 @@ import {
 
 export default {
   components: {
-    Observer,
+    observer,
   },
   data() {
     return {

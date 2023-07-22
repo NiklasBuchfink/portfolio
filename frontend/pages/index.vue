@@ -60,15 +60,157 @@
 </template>
 <script>
 import Vue2Filters from 'vue2-filters'
-import { projectQuery, startpageQuery } from '~/graphql/query'
-
 export default {
   mixins: [Vue2Filters.mixin],
   layout: 'startpage',
-  async asyncData({ $graphql }) {
-    const { projects } = await $graphql.default.request(projectQuery)
-    const { startpage } = await $graphql.default.request(startpageQuery)
-    return { projects, startpage }
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          link: 'https://www.zirkular.dev/',
+          letter: 'Z',
+          image: {
+            alternativeText: 'Zirkular Mockup',
+            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1667997424/medium_Zirkular_39ffe5d158.png',
+          },
+          color: '#FCF98F',
+          title: 'Zirkular',
+          subtitle: 'A community-first Workspace for Open Source',
+          categories: [
+            {
+              id: 1,
+              title: 'UX Design',
+            },
+            {
+              id: 2,
+              title: 'UI Design',
+            },
+            {
+              id: 3,
+              title: 'Development',
+            },
+          ],
+          startpage: true,
+          order: 1,
+        },
+        {
+          id: 2,
+          link: 'http://recapmymusic.netlify.com/',
+          letter: 'R',
+          image: {
+            alternativeText: 'RecapMyMusic Mockup',
+            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1667997960/medium_Recap_My_Music_5e675e9327.png',
+          },
+          color: '#3A3A3A',
+          title: 'RECAP_MY_MUSIC',
+          subtitle: 'Visualize your individual music taste',
+          categories: [
+            {
+              id: 4,
+              title: 'Datavisualization',
+            },
+            {
+              id: 3,
+              title: 'Development',
+            },
+          ],
+          startpage: true,
+          order: 2,
+        },
+        {
+          id: 3,
+          link: 'https://ausstellung.hfg-gmuend.de/s-2121/projekte/melo-the-sound-experience-platform/',
+          letter: 'M',
+          image: {
+            alternativeText: 'Mockup of Melo',
+            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1623756106/medium_Melo_Mockup_0b55fd38d1.png',
+          },
+          color: '#0C2F4E',
+          title: 'Melo',
+          subtitle:
+            'Manage, Edit and Distribute the Sounds of your Digital Experience',
+          categories: [
+            {
+              id: 1,
+              title: 'UX Design',
+            },
+            {
+              id: 2,
+              title: 'UI Design',
+            },
+            {
+              id: 3,
+              title: 'Development',
+            },
+          ],
+          startpage: true,
+          order: 3,
+        },
+        {
+          id: 4,
+          link: 'https://ausstellung.hfg-gmuend.de/w-2021/projekte/panasonic-image-app',
+          letter: 'P',
+          image: {
+            alternativeText: 'Mockup of Panasonic Image App',
+            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1623756192/medium_pia_mockup_f27573df6c.png',
+          },
+          color: '#201F1F',
+          title: 'Panasonic Image App',
+          subtitle: 'A Camera Remote App made for Creators',
+          categories: [
+            {
+              id: 1,
+              title: 'UX Design',
+            },
+            {
+              id: 2,
+              title: 'UI Design',
+            },
+            {
+              id: 5,
+              title: 'Prototyping',
+            },
+          ],
+          startpage: true,
+          order: 4,
+        },
+        {
+          id: 5,
+          link: 'https://ausstellung.hfg-gmuend.de/s-2121/projekte/guitar-guitar-learning-adapted-to-you',
+          letter: 'G',
+          image: {
+            alternativeText: 'Mockup of GuitAR App',
+            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1633301139/medium_Frame_222_62163bfcdb.webp',
+          },
+          color: '#E25FEB',
+          title: 'GuitAR',
+          subtitle: 'A Guitar Learning Experience adapted to You',
+          categories: [
+            {
+              id: 1,
+              title: 'UX Design',
+            },
+            {
+              id: 2,
+              title: 'UI Design',
+            },
+            {
+              id: 5,
+              title: 'Prototyping',
+            },
+          ],
+          startpage: true,
+          order: 5,
+        },
+      ],
+      startpage: {
+        heroimage: {
+          url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1623954621/medium_Profilbild_Small_48d396802e.png',
+          alternativeText: 'Portrait of Niklas Buchfink',
+        },
+      },
+    }
   },
 }
 </script>
