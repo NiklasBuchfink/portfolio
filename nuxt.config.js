@@ -68,14 +68,12 @@ export default {
     '~/plugins/vue-intersection-observer.client.js',
     // https://github.com/freearhey/vue2-filters
     '~/plugins/vue2-filters.js',
+    // https://github.com/vercel/analytics
+    '~/plugins/vercel.client.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: [
-    '~/components/atoms',
-    '~/components/molecules',
-    '~/components/organisms',
-  ],
+  components: ['~/components/atoms', '~/components/molecules'],
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://github.com/nuxt-community/style-resources-module
