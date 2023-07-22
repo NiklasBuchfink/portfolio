@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <main>
+import Footer from '~/components/molecules/Footer.vue'
       <div class="actions">
         <div class="actions-left">
           <Logo />
@@ -24,7 +25,7 @@
     <div class="fullpage">
       <StartpageFooter />
       <observer @on-change="onChange" @threshold="0.9">
-        <Startpage />
+        <Footer />
       </observer>
     </div>
   </div>
