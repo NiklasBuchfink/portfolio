@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <main>
-import Footer from '~/components/molecules/Footer.vue'
       <div class="actions">
         <div class="actions-left">
           <Logo />
