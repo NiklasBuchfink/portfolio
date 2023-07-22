@@ -30,7 +30,7 @@ Article 12 of the EU General Data Protection Regulation (DSGVO for short) requir
 
 ## 1 Hosting
 
-This website is hosted by the Netlify, Heroku and Cloudinary. The hosting services are used to provide the following services: Infrastructure and platform services, computing capacity, storage space and database services, security services and technical maintenance services.
+This website is hosted by the Vercel and Cloudinary. The hosting services are used to provide the following services: Infrastructure and platform services, computing capacity, storage space and database services, security services and technical maintenance services.
 
 In this context the hosting providers, process inventory data, contact data, content data, contract data, usage data, meta data and communication data of customers, interested parties and visitors of this online offer on the basis of our legitimate interests in an efficient and secure provision of this online offer pursuant to Art. 6 para. 1 lit. f DSGVO in conjunction with Art. 28 DSGVO. Art. 28 DSGVO (conclusion of order processing contract).
 
