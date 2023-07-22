@@ -155,7 +155,7 @@ export default {
           {
             id: 6,
             title: 'Design Engineer',
-            text: 'Development of a transmission sound generator, a sound-light visualization, programming of a dynamic driving sound for electric cars and the implementation of the control logic of an acoustic comfort function.',
+            text: 'As one of the first employees of inlang, I design and build developer tools that make it easy to adapt software for different markets by making version control accessible to new user groups.',
             linktext: 'inlang GmbH',
             linkadress: 'https://www.inlang.com/',
             date: 'Mar. 2023 - Today',
