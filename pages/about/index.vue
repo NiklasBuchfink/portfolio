@@ -237,7 +237,7 @@ export default {
             title: 'Music Everywhere',
             text: `Music plays a big role in my life. Since 2016 I'm a vinyl deejay and it fulfills me to make people dance with different music styles. I also have a small home studio and taught myself how to play guitar. The feeling of experiencing music at festivals, open airs and clubs and dancing to it with friends is one of the best.`,
             linkadress:
-              'https://www.mixcloud.com/Niklas_Buchfink/winter-grooves/',
+              'https://www.mixcloud.com/NiklasBuchfink/winter-grooves/',
             order: 1,
           },
           {
