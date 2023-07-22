@@ -1,12 +1,6 @@
-const strapiBaseUri = process.env.BACKEND_BASE_URL || `http://localhost:1337`
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  env: {
-    strapiBaseUri,
-    // strapiBaseUrl: process.env.API_URL || 'http://localhost:1337'
-  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Niklas Buchfink - Designer & Engineer',
@@ -105,7 +99,6 @@ export default {
   graphql: {
     clients: {
       default: {
-        endpoint: process.env.BACKEND_URL || `http://localhost:1337/graphql`,
         options: {},
       },
     },
