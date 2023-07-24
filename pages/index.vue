@@ -67,7 +67,63 @@ export default {
     return {
       projects: [
         {
-          id: 1,
+          id: 7,
+          link: 'https://www.inlang.com/',
+          letter: 'I',
+          image: {
+            alternativeText: 'inlang Web Editor Mockup',
+            url: '/inlang-mockup.png',
+          },
+          color: '#1E293B',
+          title: 'inlang',
+          subtitle: 'Globalization infrastructure for software',
+          categories: [
+            {
+              id: 1,
+              title: 'UX Design',
+            },
+            {
+              id: 2,
+              title: 'UI Design',
+            },
+            {
+              id: 3,
+              title: 'Development',
+            },
+          ],
+          startpage: true,
+          order: 1,
+        },
+        {
+          id: 6,
+          link: 'http://getstage.app/',
+          letter: 'S',
+          image: {
+            alternativeText: 'Stage Website Mockup',
+            url: 'stage-mockup.png',
+          },
+          color: '#18181B',
+          title: 'Stage',
+          subtitle: 'Your always up-to-date personal website',
+          categories: [
+            {
+              id: 1,
+              title: 'UX Design',
+            },
+            {
+              id: 2,
+              title: 'UI Design',
+            },
+            {
+              id: 3,
+              title: 'Development',
+            },
+          ],
+          startpage: true,
+          order: 2,
+        },
+        {
+          id: 5,
           link: 'https://www.zirkular.dev/',
           letter: 'Z',
           image: {
@@ -91,11 +147,11 @@ export default {
               title: 'Development',
             },
           ],
-          startpage: true,
-          order: 1,
+          startpage: false,
+          order: 3,
         },
         {
-          id: 2,
+          id: 4,
           link: 'http://recapmymusic.netlify.com/',
           letter: 'R',
           image: {
@@ -116,7 +172,7 @@ export default {
             },
           ],
           startpage: true,
-          order: 2,
+          order: 4,
         },
         {
           id: 3,
@@ -145,10 +201,10 @@ export default {
             },
           ],
           startpage: true,
-          order: 3,
+          order: 5,
         },
         {
-          id: 4,
+          id: 2,
           link: 'https://ausstellung.hfg-gmuend.de/w-2021/projekte/panasonic-image-app',
           letter: 'P',
           image: {
@@ -173,10 +229,10 @@ export default {
             },
           ],
           startpage: true,
-          order: 4,
+          order: 6,
         },
         {
-          id: 5,
+          id: 1,
           link: 'https://ausstellung.hfg-gmuend.de/s-2121/projekte/guitar-guitar-learning-adapted-to-you',
           letter: 'G',
           image: {
@@ -200,8 +256,8 @@ export default {
               title: 'Prototyping',
             },
           ],
-          startpage: true,
-          order: 5,
+          startpage: false,
+          order: 7,
         },
       ],
       startpage: {
