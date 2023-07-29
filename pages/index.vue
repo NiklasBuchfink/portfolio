@@ -122,34 +122,34 @@ export default {
           startpage: true,
           order: 2,
         },
-        {
-          id: 5,
-          link: 'https://www.zirkular.dev/',
-          letter: 'Z',
-          image: {
-            alternativeText: 'Zirkular Mockup',
-            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1667997424/medium_Zirkular_39ffe5d158.png',
-          },
-          color: '#FCF98F',
-          title: 'Zirkular',
-          subtitle: 'A community-first Workspace for Open Source',
-          categories: [
-            {
-              id: 1,
-              title: 'UX Design',
-            },
-            {
-              id: 2,
-              title: 'UI Design',
-            },
-            {
-              id: 3,
-              title: 'Development',
-            },
-          ],
-          startpage: false,
-          order: 3,
-        },
+        // {
+        //   id: 5,
+        //   link: 'https://www.zirkular.dev/',
+        //   letter: 'Z',
+        //   image: {
+        //     alternativeText: 'Zirkular Mockup',
+        //     url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1667997424/medium_Zirkular_39ffe5d158.png',
+        //   },
+        //   color: '#FCF98F',
+        //   title: 'Zirkular',
+        //   subtitle: 'A community-first Workspace for Open Source',
+        //   categories: [
+        //     {
+        //       id: 1,
+        //       title: 'UX Design',
+        //     },
+        //     {
+        //       id: 2,
+        //       title: 'UI Design',
+        //     },
+        //     {
+        //       id: 3,
+        //       title: 'Development',
+        //     },
+        //   ],
+        //   startpage: false,
+        //   order: 3,
+        // },
         {
           id: 4,
           link: 'http://recapmymusic.netlify.com/',
@@ -231,34 +231,34 @@ export default {
           startpage: true,
           order: 6,
         },
-        {
-          id: 1,
-          link: 'https://ausstellung.hfg-gmuend.de/s-2121/projekte/guitar-guitar-learning-adapted-to-you',
-          letter: 'G',
-          image: {
-            alternativeText: 'Mockup of GuitAR App',
-            url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1633301139/medium_Frame_222_62163bfcdb.webp',
-          },
-          color: '#E25FEB',
-          title: 'GuitAR',
-          subtitle: 'A Guitar Learning Experience adapted to You',
-          categories: [
-            {
-              id: 1,
-              title: 'UX Design',
-            },
-            {
-              id: 2,
-              title: 'UI Design',
-            },
-            {
-              id: 5,
-              title: 'Prototyping',
-            },
-          ],
-          startpage: false,
-          order: 7,
-        },
+        // {
+        //   id: 1,
+        //   link: 'https://ausstellung.hfg-gmuend.de/s-2121/projekte/guitar-guitar-learning-adapted-to-you',
+        //   letter: 'G',
+        //   image: {
+        //     alternativeText: 'Mockup of GuitAR App',
+        //     url: 'https://res.cloudinary.com/niklasbuchfink/image/upload/v1633301139/medium_Frame_222_62163bfcdb.webp',
+        //   },
+        //   color: '#E25FEB',
+        //   title: 'GuitAR',
+        //   subtitle: 'A Guitar Learning Experience adapted to You',
+        //   categories: [
+        //     {
+        //       id: 1,
+        //       title: 'UX Design',
+        //     },
+        //     {
+        //       id: 2,
+        //       title: 'UI Design',
+        //     },
+        //     {
+        //       id: 5,
+        //       title: 'Prototyping',
+        //     },
+        //   ],
+        //   startpage: false,
+        //   order: 7,
+        // },
       ],
       startpage: {
         heroimage: {
