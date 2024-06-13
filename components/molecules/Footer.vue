@@ -10,7 +10,7 @@
         >LinkedIn</a
       >
       <a
-        href="https://twitter.com/NBuchfink"
+        href="https://twitter.com/niklasbuchfink"
         target="blank"
         rel="noopener noreferrer"
         class="twitter"
