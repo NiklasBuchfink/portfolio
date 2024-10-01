@@ -152,7 +152,7 @@ export default {
         // },
         {
           id: 4,
-          link: 'http://recapmymusic.netlify.com/',
+          link: 'https://recapmymusic.vercel.app/',
           letter: 'R',
           image: {
             alternativeText: 'RecapMyMusic Mockup',
